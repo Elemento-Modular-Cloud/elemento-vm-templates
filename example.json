@@ -1,0 +1,32 @@
+{
+    "info": {
+        "name": "",
+        "description": ""
+    },
+
+    "cpu": {
+        "slots": 0,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [],
+        "flags": []
+    },
+    
+    "ram": {
+        "ramsize": 2,
+        "reqECC": false
+    },
+    
+    "pci": [
+        {
+            "vendor": "",
+            "model": "",
+            "quantity": 0
+        },
+        {
+            "vendor": "",
+            "model": "",
+            "quantity": 0
+        }
+    ]
+}
