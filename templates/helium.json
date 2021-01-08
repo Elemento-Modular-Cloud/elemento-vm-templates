@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Neon",
+        "description": "Ideal for small office and web browsing activity"
+    },
+
+    "cpu": {
+        "slots": 0,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": ["X86_64"],
+        "flags": ["sse2"]
+    },
+    
+    "ram": {
+        "ramsize": 2,
+        "reqECC": false
+    }
+}
