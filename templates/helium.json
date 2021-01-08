@@ -5,7 +5,7 @@
     },
 
     "cpu": {
-        "slots": 0,
+        "slots": 1,
         "overprovision": 4,
         "allowSMT": false,
         "archs": ["X86_64"],
@@ -13,7 +13,7 @@
     },
     
     "ram": {
-        "ramsize": -1,
+        "ramsize": 512,
         "reqECC": false
     }
 }
