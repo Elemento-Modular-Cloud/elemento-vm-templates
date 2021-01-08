@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Helium",
+        "description": "Smallest virtual machine template for light tasks"
+    },
+
+    "cpu": {
+        "slots": 0,
+        "overprovision": 4,
+        "allowSMT": false,
+        "archs": ["X86_64"],
+        "flags": []
+    },
+    
+    "ram": {
+        "ramsize": -1,
+        "reqECC": false
+    }
+}
