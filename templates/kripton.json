@@ -13,7 +13,7 @@
     },
     
     "ram": {
-        "ramsize": 4096,
+        "ramsize": 8192,
         "reqECC": false
     },
     
