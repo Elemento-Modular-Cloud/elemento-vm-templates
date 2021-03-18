@@ -1,0 +1,27 @@
+{
+    "info": {
+        "name": "Kripton",
+        "description": "A machine with decent CPU power and over average graphical computing power"
+    },
+
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": ["X86_64"],
+        "flags": ["sse2", "avx2"]
+    },
+    
+    "ram": {
+        "ramsize": 4096,
+        "reqECC": false
+    },
+    
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1bb1",
+            "quantity": 1
+        }
+    ]
+}
