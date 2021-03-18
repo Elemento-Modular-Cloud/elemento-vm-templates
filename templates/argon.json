@@ -5,7 +5,7 @@
     },
 
     "cpu": {
-        "slots": 8,
+        "slots": 4,
         "overprovision": 2,
         "allowSMT": false,
         "archs": ["X86_64"],
