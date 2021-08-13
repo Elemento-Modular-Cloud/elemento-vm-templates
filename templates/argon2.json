@@ -1,7 +1,7 @@
 {
     "info": {
         "name": "Argon 2",
-        "description": "A machine with decent CPU power and over average graphical computing power"
+        "description": "A machine with decent CPU power and two Nvidia P4000 GPUs"
     },
 
     "cpu": {
