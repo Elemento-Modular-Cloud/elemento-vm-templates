@@ -6,7 +6,7 @@
 
     "cpu": {
         "slots": 4,
-        "overprovision": 2,
+        "overprovision": 1,
         "allowSMT": false,
         "archs": ["X86_64"],
         "flags": ["sse2", "avx2"]
