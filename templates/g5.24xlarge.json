@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g5.24xlarge",
+        "description": "AWS EC2 g5.24xlarge (GPU instance); 96 vCPU; 393216 MiB RAM; usage: on-demand, spot; 4x NVIDIA A10G"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2237",
+            "quantity": 4
+        }
+    ]
+}

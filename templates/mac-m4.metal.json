@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "mac-m4.metal",
+        "description": "AWS EC2 mac-m4.metal (General purpose); 10 vCPU; 24576 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 10,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "ARM64_MAC"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 24576,
+        "reqECC": false
+    }
+}

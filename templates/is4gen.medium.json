@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "is4gen.medium",
+        "description": "AWS EC2 is4gen.medium (Storage optimized); 1 vCPU; 6144 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 6144,
+        "reqECC": false
+    }
+}

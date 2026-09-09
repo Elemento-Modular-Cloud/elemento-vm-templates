@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "x8aedz.metal-24xl",
+        "description": "AWS EC2 x8aedz.metal-24xl (Memory optimized); 96 vCPU; 3145728 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3145728,
+        "reqECC": false
+    }
+}

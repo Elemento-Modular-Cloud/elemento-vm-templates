@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "t4g.micro",
+        "description": "AWS EC2 t4g.micro (General purpose); 2 vCPU; 1024 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 1024,
+        "reqECC": false
+    }
+}

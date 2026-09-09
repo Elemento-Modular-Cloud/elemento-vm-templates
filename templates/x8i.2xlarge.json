@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "x8i.2xlarge",
+        "description": "AWS EC2 x8i.2xlarge (Memory optimized); 8 vCPU; 131072 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

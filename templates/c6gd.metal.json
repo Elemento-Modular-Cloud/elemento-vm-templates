@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c6gd.metal",
+        "description": "AWS EC2 c6gd.metal (Compute optimized); 64 vCPU; 131072 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

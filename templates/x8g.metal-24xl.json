@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "x8g.metal-24xl",
+        "description": "AWS EC2 x8g.metal-24xl (Memory optimized); 96 vCPU; 1572864 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 1572864,
+        "reqECC": false
+    }
+}

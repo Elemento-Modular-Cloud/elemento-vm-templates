@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c6g.medium",
+        "description": "AWS EC2 c6g.medium (Compute optimized); 1 vCPU; 2048 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 2048,
+        "reqECC": false
+    }
+}

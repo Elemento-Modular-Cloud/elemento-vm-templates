@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "m9g.16xlarge",
+        "description": "AWS EC2 m9g.16xlarge (General purpose); 64 vCPU; 262144 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

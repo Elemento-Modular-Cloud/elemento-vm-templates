@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "i8g.large",
+        "description": "AWS EC2 i8g.large (Storage optimized); 2 vCPU; 16384 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

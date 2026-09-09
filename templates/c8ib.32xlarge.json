@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c8ib.32xlarge",
+        "description": "AWS EC2 c8ib.32xlarge (Compute optimized); 128 vCPU; 262144 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

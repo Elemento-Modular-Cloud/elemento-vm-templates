@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "r7gd.metal",
+        "description": "AWS EC2 r7gd.metal (Memory optimized); 64 vCPU; 524288 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 524288,
+        "reqECC": false
+    }
+}

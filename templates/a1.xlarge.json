@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "a1.xlarge",
+        "description": "AWS EC2 a1.xlarge (General purpose); 4 vCPU; 8192 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

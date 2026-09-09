@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "r6g.8xlarge",
+        "description": "AWS EC2 r6g.8xlarge (Memory optimized); 32 vCPU; 262144 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m2.4xlarge",
+        "description": "AWS EC2 m2.4xlarge (Memory optimized); 8 vCPU; 70042 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 70042,
+        "reqECC": false
+    }
+}

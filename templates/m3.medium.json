@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m3.medium",
+        "description": "AWS EC2 m3.medium (General purpose); 1 vCPU; 3840 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3840,
+        "reqECC": false
+    }
+}

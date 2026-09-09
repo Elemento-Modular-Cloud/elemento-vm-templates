@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "t1.micro",
+        "description": "AWS EC2 t1.micro (Micro instances); 1 vCPU; 628 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 628,
+        "reqECC": false
+    }
+}

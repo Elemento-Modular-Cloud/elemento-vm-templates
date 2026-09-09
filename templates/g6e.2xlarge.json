@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g6e.2xlarge",
+        "description": "AWS EC2 g6e.2xlarge (GPU instance); 8 vCPU; 65536 MiB RAM; usage: on-demand, spot; 1x NVIDIA L40S"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "26b9",
+            "quantity": 1
+        }
+    ]
+}

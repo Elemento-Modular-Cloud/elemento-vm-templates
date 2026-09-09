@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "t4g.large",
+        "description": "AWS EC2 t4g.large (General purpose); 2 vCPU; 8192 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

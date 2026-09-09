@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "i3.8xlarge",
+        "description": "AWS EC2 i3.8xlarge (Storage optimized); 32 vCPU; 249856 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 249856,
+        "reqECC": false
+    }
+}

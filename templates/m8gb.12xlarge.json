@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "m8gb.12xlarge",
+        "description": "AWS EC2 m8gb.12xlarge (General purpose); 48 vCPU; 196608 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m5ad.large",
+        "description": "AWS EC2 m5ad.large (General purpose); 2 vCPU; 8192 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

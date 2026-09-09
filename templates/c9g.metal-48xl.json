@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c9g.metal-48xl",
+        "description": "AWS EC2 c9g.metal-48xl (Compute optimized); 192 vCPU; 393216 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

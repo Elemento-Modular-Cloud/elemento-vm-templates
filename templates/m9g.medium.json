@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "m9g.medium",
+        "description": "AWS EC2 m9g.medium (General purpose); 1 vCPU; 4096 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 4096,
+        "reqECC": false
+    }
+}

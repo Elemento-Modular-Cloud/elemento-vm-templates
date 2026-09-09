@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "i7ie.3xlarge",
+        "description": "AWS EC2 i7ie.3xlarge (Storage optimized); 12 vCPU; 98304 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 98304,
+        "reqECC": false
+    }
+}

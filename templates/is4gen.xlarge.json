@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "is4gen.xlarge",
+        "description": "AWS EC2 is4gen.xlarge (Storage optimized); 4 vCPU; 24576 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 24576,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "i8ge.12xlarge",
+        "description": "AWS EC2 i8ge.12xlarge (Storage optimized); 48 vCPU; 393216 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

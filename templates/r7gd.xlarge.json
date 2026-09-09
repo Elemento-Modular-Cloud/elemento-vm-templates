@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "r7gd.xlarge",
+        "description": "AWS EC2 r7gd.xlarge (Memory optimized); 4 vCPU; 32768 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

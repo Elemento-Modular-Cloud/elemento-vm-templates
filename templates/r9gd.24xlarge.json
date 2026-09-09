@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "r9gd.24xlarge",
+        "description": "AWS EC2 r9gd.24xlarge (Memory optimized); 96 vCPU; 786432 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    }
+}

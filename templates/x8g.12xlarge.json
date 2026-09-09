@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "x8g.12xlarge",
+        "description": "AWS EC2 x8g.12xlarge (Memory optimized); 48 vCPU; 786432 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "p6-b300.48xlarge",
+        "description": "AWS EC2 p6-b300.48xlarge (GPU instance); 192 vCPU; 4194304 MiB RAM; usage: on-demand, spot; 8x NVIDIA B300"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 4194304,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "3182",
+            "quantity": 8
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "mac1.metal",
+        "description": "AWS EC2 mac1.metal (General purpose); 12 vCPU; 32768 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64_MAC"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

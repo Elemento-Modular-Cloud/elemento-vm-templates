@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "r8gd.48xlarge",
+        "description": "AWS EC2 r8gd.48xlarge (Memory optimized); 192 vCPU; 1572864 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 1572864,
+        "reqECC": false
+    }
+}

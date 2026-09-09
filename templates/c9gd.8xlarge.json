@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c9gd.8xlarge",
+        "description": "AWS EC2 c9gd.8xlarge (Compute optimized); 32 vCPU; 65536 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

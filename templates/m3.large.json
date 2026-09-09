@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m3.large",
+        "description": "AWS EC2 m3.large (General purpose); 2 vCPU; 7680 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 7680,
+        "reqECC": false
+    }
+}

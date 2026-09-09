@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c6gn.4xlarge",
+        "description": "AWS EC2 c6gn.4xlarge (Compute optimized); 16 vCPU; 32768 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

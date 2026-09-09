@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "i4g.2xlarge",
+        "description": "AWS EC2 i4g.2xlarge (Storage optimized); 8 vCPU; 65536 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "r6in.large",
+        "description": "AWS EC2 r6in.large (Memory optimized); 2 vCPU; 16384 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

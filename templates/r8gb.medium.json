@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "r8gb.medium",
+        "description": "AWS EC2 r8gb.medium (Memory optimized); 1 vCPU; 8192 MiB RAM; usage: on-demand, spot"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}
