@@ -28,4 +28,4 @@ python3 scripts/generate_upcloud_templates.py --source api
 python3 scripts/generate_upcloud_templates.py --source docs
 ```
 
-Mapping: plan `core_number` → `cpu.slots`, `memory_amount` (MiB) → `ram.ramsize`, NVIDIA `gpu_amount`/`gpu_model` → `pci`. Plan names like `GPU-8xCPU-64GB-1xL40S` are also parsed when using the docs source.
+Mapping: plan `core_number` → `cpu.slots`, `memory_amount` (MiB) → `ram.ramsize`, any accelerator `gpu_amount`/`gpu_model` → `pci`. Plan names like `GPU-8xCPU-64GB-1xL40S` are also parsed when using the docs source.

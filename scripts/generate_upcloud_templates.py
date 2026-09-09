@@ -17,17 +17,22 @@ from pathlib import Path
 from typing import Any
 
 NVIDIA_VENDOR = "10de"
-NVIDIA_GPU_MODEL_IDS: dict[str, str] = {
-    "l4": "27b8",
-    "l40s": "26b9",
-    "l40": "26b5",
-    "h100": "2330",
-    "h200": "2335",
-    "b200": "2901",
-    "b300": "3182",
-    "a100": "20b0",
-    "t4": "1eb8",
-    "v100": "1db4",
+AMD_VENDOR = "1002"
+UNKNOWN_VENDOR = "0000"
+
+ACCELERATOR_MODEL_IDS: dict[str, tuple[str, str]] = {
+    "l4": (NVIDIA_VENDOR, "27b8"),
+    "l40s": (NVIDIA_VENDOR, "26b9"),
+    "l40": (NVIDIA_VENDOR, "26b5"),
+    "h100": (NVIDIA_VENDOR, "2330"),
+    "h200": (NVIDIA_VENDOR, "2335"),
+    "b200": (NVIDIA_VENDOR, "2901"),
+    "b300": (NVIDIA_VENDOR, "3182"),
+    "a100": (NVIDIA_VENDOR, "20b0"),
+    "t4": (NVIDIA_VENDOR, "1eb8"),
+    "v100": (NVIDIA_VENDOR, "1db4"),
+    "mi25": (AMD_VENDOR, "740c"),
+    "v620": (AMD_VENDOR, "73a3"),
 }
 
 PLAN_RE = re.compile(
@@ -45,14 +50,19 @@ def family_of(name: str) -> str:
     return "GPU" if name.startswith("GPU-") else "CLOUD"
 
 
-def resolve_nvidia_model(gpu_name: str) -> str:
+def resolve_accelerator(gpu_name: str) -> tuple[str, str]:
     name = gpu_name.strip().lower().replace("nvidia ", "").replace("nvidia-", "")
-    if name in NVIDIA_GPU_MODEL_IDS:
-        return NVIDIA_GPU_MODEL_IDS[name]
-    for key, model in sorted(NVIDIA_GPU_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
+    name = name.replace("amd ", "").replace("radeon pro ", "")
+    for key, (vendor, model) in sorted(
+        ACCELERATOR_MODEL_IDS.items(), key=lambda kv: -len(kv[0])
+    ):
         if key in name:
-            return model
-    return "0000"
+            return vendor, model
+    if "amd" in name or "radeon" in name:
+        return AMD_VENDOR, "0000"
+    if name:
+        return NVIDIA_VENDOR, "0000"
+    return UNKNOWN_VENDOR, "0000"
 
 
 def cpu_flags(archs: list[str]) -> list[str]:
@@ -74,7 +84,7 @@ def parse_plan_name(name: str) -> dict[str, Any] | None:
         "core_number": cores,
         "memory_amount": mem_gb * 1024,
         "gpu_amount": gpu_count,
-        "gpu_model": f"NVIDIA {gpu_model}" if gpu_model else None,
+        "gpu_model": gpu_model,
     }
 
 
@@ -92,7 +102,14 @@ def template_from_plan(plan: dict[str, Any]) -> dict[str, Any]:
         f"{ram_mib} MiB RAM",
     ]
     if gpu_count and gpu_model:
-        parts.append(f"{gpu_count}x {gpu_model}")
+        label = str(gpu_model)
+        if not any(b in label.lower() for b in ("nvidia", "amd", "radeon", "intel")):
+            if any(
+                tok in label.lower()
+                for tok in ("l4", "l40", "h100", "h200", "a100", "b200", "b300", "t4", "v100")
+            ):
+                label = f"NVIDIA {label}"
+        parts.append(f"{gpu_count}x {label}")
     description = "; ".join(parts)
 
     tmpl: dict[str, Any] = {
@@ -108,11 +125,11 @@ def template_from_plan(plan: dict[str, Any]) -> dict[str, Any]:
     }
 
     if gpu_count and gpu_model:
-        model = resolve_nvidia_model(str(gpu_model))
+        vendor, model = resolve_accelerator(str(gpu_model))
         if model == "0000":
-            tmpl["info"]["description"] += "; unmapped NVIDIA GPU model (review pci.model)"
+            tmpl["info"]["description"] += "; unmapped accelerator model (review pci.model)"
         tmpl["pci"] = [
-            {"vendor": NVIDIA_VENDOR, "model": model, "quantity": gpu_count}
+            {"vendor": vendor, "model": model, "quantity": gpu_count}
         ]
     return tmpl
 
