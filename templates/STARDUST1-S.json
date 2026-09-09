@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "STARDUST1-S",
+        "description": "Scaleway Instance STARDUST1-S (STARDUST1); 1 vCPU; 1024 MiB RAM"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1024,
+        "reqECC": false
+    }
+}

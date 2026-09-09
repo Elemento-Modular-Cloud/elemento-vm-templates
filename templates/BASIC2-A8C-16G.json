@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "BASIC2-A8C-16G",
+        "description": "Scaleway Instance BASIC2-A8C-16G (BASIC2); 8 vCPU; 16384 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

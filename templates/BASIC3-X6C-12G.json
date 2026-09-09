@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "BASIC3-X6C-12G",
+        "description": "Scaleway Instance BASIC3-X6C-12G (BASIC3); 6 vCPU; 12288 MiB RAM"
+    },
+    "cpu": {
+        "slots": 6,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 12288,
+        "reqECC": false
+    }
+}

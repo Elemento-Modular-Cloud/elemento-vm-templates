@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "MEMORY3-X48C-384G",
+        "description": "Scaleway Instance MEMORY3-X48C-384G (MEMORY3); 48 vCPU; 393216 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

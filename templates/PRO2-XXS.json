@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "PRO2-XXS",
+        "description": "Scaleway Instance PRO2-XXS (PRO2); 2 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

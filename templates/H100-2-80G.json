@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "H100-2-80G",
+        "description": "Scaleway Instance H100-2-80G (H100); 48 vCPU; 491520 MiB RAM; 2x H100-PCIe"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 491520,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2331",
+            "quantity": 2
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "GP1-L",
+        "description": "Scaleway Instance GP1-L (GP1); 32 vCPU; 131072 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

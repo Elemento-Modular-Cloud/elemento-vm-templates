@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "L40S-8-48G",
+        "description": "Scaleway Instance L40S-8-48G (L40S); 64 vCPU; 786432 MiB RAM; 8x L40S"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "26b9",
+            "quantity": 8
+        }
+    ]
+}

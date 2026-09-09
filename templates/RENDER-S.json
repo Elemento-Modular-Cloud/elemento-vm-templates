@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "RENDER-S",
+        "description": "Scaleway Instance RENDER-S (RENDER); 10 vCPU; 43008 MiB RAM; 1x P100"
+    },
+    "cpu": {
+        "slots": 10,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 43008,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "15f8",
+            "quantity": 1
+        }
+    ]
+}

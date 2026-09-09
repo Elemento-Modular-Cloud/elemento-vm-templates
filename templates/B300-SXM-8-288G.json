@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "B300-SXM-8-288G",
+        "description": "Scaleway Instance B300-SXM-8-288G (B300); 224 vCPU; 3932160 MiB RAM; 8x B300-SXM"
+    },
+    "cpu": {
+        "slots": 224,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3932160,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "3182",
+            "quantity": 8
+        }
+    ]
+}

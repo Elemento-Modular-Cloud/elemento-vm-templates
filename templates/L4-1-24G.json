@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "L4-1-24G",
+        "description": "Scaleway Instance L4-1-24G (L4); 8 vCPU; 49152 MiB RAM; 1x L4"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 49152,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "27b8",
+            "quantity": 1
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "COMPUTE3-X64C-128G",
+        "description": "Scaleway Instance COMPUTE3-X64C-128G (COMPUTE3); 64 vCPU; 131072 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

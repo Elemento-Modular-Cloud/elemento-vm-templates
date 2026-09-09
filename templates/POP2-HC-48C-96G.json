@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "POP2-HC-48C-96G",
+        "description": "Scaleway Instance POP2-HC-48C-96G (POP2); 48 vCPU; 98304 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 98304,
+        "reqECC": false
+    }
+}

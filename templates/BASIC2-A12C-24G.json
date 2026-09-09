@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "BASIC2-A12C-24G",
+        "description": "Scaleway Instance BASIC2-A12C-24G (BASIC2); 12 vCPU; 24576 MiB RAM"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 24576,
+        "reqECC": false
+    }
+}

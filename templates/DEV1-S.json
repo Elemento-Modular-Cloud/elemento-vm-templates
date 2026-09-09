@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "DEV1-S",
+        "description": "Scaleway Instance DEV1-S (DEV1); 2 vCPU; 2048 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 2048,
+        "reqECC": false
+    }
+}

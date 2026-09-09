@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "POP2-HM-64C-512G",
+        "description": "Scaleway Instance POP2-HM-64C-512G (POP2); 64 vCPU; 524288 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 524288,
+        "reqECC": false
+    }
+}
