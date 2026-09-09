@@ -1,7 +1,7 @@
 {
     "info": {
         "name": "g7.48xlarge",
-        "description": "AWS EC2 g7.48xlarge (GPU instance); 192 vCPU; 786432 MiB RAM; usage: on-demand, spot; 8x NVIDIA RTX PRO 4500 Blackwell; unmapped NVIDIA GPU model (review pci.model)"
+        "description": "AWS EC2 g7.48xlarge (GPU instance); 192 vCPU; 786432 MiB RAM; usage: on-demand, spot; 8x NVIDIA RTX PRO 4500 Blackwell"
     },
     "cpu": {
         "slots": 192,
@@ -22,7 +22,7 @@
     "pci": [
         {
             "vendor": "10de",
-            "model": "0000",
+            "model": "2b21",
             "quantity": 8
         }
     ]

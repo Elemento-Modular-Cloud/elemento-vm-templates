@@ -12,51 +12,68 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
-# NVIDIA PCI vendor + device IDs for GPUs commonly offered on EC2.
+# PCI vendor IDs + device IDs for accelerators commonly offered on EC2.
 NVIDIA_VENDOR = "10de"
-NVIDIA_GPU_MODEL_IDS: dict[str, str] = {
-    "t4": "1eb8",
-    "t4g": "1eb4",
-    "a10g": "2237",
-    "a10": "2236",
-    "l4": "27b8",
-    "l40s": "26b9",
-    "l40": "26b5",
-    "v100": "1db4",
-    "a100 80gb": "20b5",
-    "a100-80gb": "20b5",
-    "a100 40gb": "20b0",
-    "a100-40gb": "20b0",
-    "a100": "20b0",
-    "h100 nvl": "2321",
-    "h100 pcie": "2331",
-    "h100": "2330",
-    "h200": "2335",
-    "p4d": "20b0",  # A100 SXM
-    "p4de": "20b2",  # A100 80GB SXM
-    "p3": "1db4",
-    "p2": "15f8",  # Tesla P100
-    "g3": "1db1",  # Tesla M60 often reported differently; keep as V100-era fallback unused
-    "m60": "13f2",
-    "k80": "102d",
-    "k520": "118a",
-    "grid k520": "118a",
-    "a10g tensor core": "2237",
-    "tesla t4": "1eb8",
-    "tesla v100": "1db4",
-    "tesla p100": "15f8",
-    "tesla p4": "1bb3",
-    "tesla k80": "102d",
-    "tesla m60": "13f2",
-    "nvidia a10g": "2237",
-    "nvidia l4": "27b8",
-    "nvidia l40s": "26b9",
-    "nvidia h100": "2330",
-    "nvidia h200": "2335",
-    "nvidia a100": "20b0",
-    "b200": "2901",
-    "b300": "3182",
-    "rtx pro 6000": "2bb5",
+AMD_VENDOR = "1002"
+QUALCOMM_VENDOR = "17cb"
+HABANA_VENDOR = "1da3"
+XILINX_VENDOR = "10ee"
+AWS_VENDOR = "1d0f"  # Amazon/Annapurna for Inferentia/Trainium
+UNKNOWN_VENDOR = "0000"
+
+# Lowercase name token -> (vendor, model_hex)
+ACCELERATOR_MODEL_IDS: dict[str, tuple[str, str]] = {
+    # NVIDIA
+    "t4": (NVIDIA_VENDOR, "1eb8"),
+    "t4g": (NVIDIA_VENDOR, "1eb4"),
+    "a10g": (NVIDIA_VENDOR, "2237"),
+    "a10": (NVIDIA_VENDOR, "2236"),
+    "l4": (NVIDIA_VENDOR, "27b8"),
+    "l40s": (NVIDIA_VENDOR, "26b9"),
+    "l40": (NVIDIA_VENDOR, "26b5"),
+    "v100": (NVIDIA_VENDOR, "1db4"),
+    "a100 80gb": (NVIDIA_VENDOR, "20b5"),
+    "a100-80gb": (NVIDIA_VENDOR, "20b5"),
+    "a100 40gb": (NVIDIA_VENDOR, "20b0"),
+    "a100-40gb": (NVIDIA_VENDOR, "20b0"),
+    "a100": (NVIDIA_VENDOR, "20b0"),
+    "h100 nvl": (NVIDIA_VENDOR, "2321"),
+    "h100 pcie": (NVIDIA_VENDOR, "2331"),
+    "h100": (NVIDIA_VENDOR, "2330"),
+    "h200": (NVIDIA_VENDOR, "2335"),
+    "m60": (NVIDIA_VENDOR, "13f2"),
+    "k80": (NVIDIA_VENDOR, "102d"),
+    "k520": (NVIDIA_VENDOR, "118a"),
+    "grid k520": (NVIDIA_VENDOR, "118a"),
+    "tesla t4": (NVIDIA_VENDOR, "1eb8"),
+    "tesla v100": (NVIDIA_VENDOR, "1db4"),
+    "tesla p100": (NVIDIA_VENDOR, "15f8"),
+    "tesla p4": (NVIDIA_VENDOR, "1bb3"),
+    "tesla k80": (NVIDIA_VENDOR, "102d"),
+    "tesla m60": (NVIDIA_VENDOR, "13f2"),
+    "b200": (NVIDIA_VENDOR, "2901"),
+    "b300": (NVIDIA_VENDOR, "3182"),
+    "rtx pro 6000": (NVIDIA_VENDOR, "2bb5"),
+    "rtx pro 4500": (NVIDIA_VENDOR, "2b21"),
+    # AMD
+    "radeon pro v520": (AMD_VENDOR, "73a1"),
+    "v520": (AMD_VENDOR, "73a1"),
+    "mi25": (AMD_VENDOR, "740c"),
+    # Qualcomm
+    "qualcomm ai 100": (QUALCOMM_VENDOR, "a100"),
+    "ai 100": (QUALCOMM_VENDOR, "a100"),
+    # Habana
+    "gaudi": (HABANA_VENDOR, "1000"),
+    "habana": (HABANA_VENDOR, "1000"),
+    # AWS Neuron
+    "inferentia": (AWS_VENDOR, "0000"),
+    "inferentia2": (AWS_VENDOR, "0000"),
+    "trainium": (AWS_VENDOR, "0000"),
+    "trainium2": (AWS_VENDOR, "0000"),
+    # FPGA / Xilinx
+    "xilinx": (XILINX_VENDOR, "0000"),
+    "vu9p": (XILINX_VENDOR, "0000"),
+    "fpga": (XILINX_VENDOR, "0000"),
 }
 
 VANTAGE_INSTANCES_URL = "https://instances.vantage.sh/instances.json"
@@ -93,34 +110,71 @@ def cpu_flags(archs: list[str]) -> list[str]:
     return []
 
 
-def resolve_nvidia_model(gpu_name: str) -> str:
-    name = gpu_name.strip().lower()
-    if name in NVIDIA_GPU_MODEL_IDS:
-        return NVIDIA_GPU_MODEL_IDS[name]
-    # Prefer longer/more specific keys first.
-    for key, model in sorted(NVIDIA_GPU_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
-        if key in name:
-            return model
-    return "0000"
-
-
-def is_nvidia_gpu(manufacturer: str | None, name: str | None) -> bool:
+def resolve_accelerator(
+    manufacturer: str | None, name: str | None
+) -> tuple[str, str]:
+    """Return (vendor, model_hex) for any accelerator."""
     blob = f"{manufacturer or ''} {name or ''}".lower()
-    # Explicit non-NVIDIA accelerators must never get NVIDIA pci entries.
-    non_nvidia = (
-        "amd",
-        "radeon",
-        "qualcomm",
-        "habana",
-        "gaudi",
-        "inferentia",
-        "trainium",
-        "xilinx",
-        "fpga",
-    )
-    if any(tok in blob for tok in non_nvidia):
-        return False
-    return "nvidia" in blob or "tesla" in blob
+    for key, (vendor, model) in sorted(
+        ACCELERATOR_MODEL_IDS.items(), key=lambda kv: -len(kv[0])
+    ):
+        if key in blob:
+            return vendor, model
+
+    mfr = (manufacturer or "").lower()
+    if "amd" in mfr or "radeon" in blob:
+        return AMD_VENDOR, "0000"
+    if "qualcomm" in mfr or "qualcomm" in blob:
+        return QUALCOMM_VENDOR, "0000"
+    if "habana" in mfr or "gaudi" in blob:
+        return HABANA_VENDOR, "0000"
+    if "xilinx" in mfr or "fpga" in blob:
+        return XILINX_VENDOR, "0000"
+    if "amazon" in mfr or "aws" in mfr or "inferentia" in blob or "trainium" in blob:
+        return AWS_VENDOR, "0000"
+    if "nvidia" in mfr or "tesla" in blob or "nvidia" in blob:
+        return NVIDIA_VENDOR, "0000"
+    return UNKNOWN_VENDOR, "0000"
+
+
+def collect_accelerators(it: dict[str, Any]) -> list[dict[str, Any]]:
+    """Collect GPU / FPGA / inference / neuron accelerators from an AWS-shaped record."""
+    devices: list[dict[str, Any]] = []
+
+    for gpu in (it.get("GpuInfo") or {}).get("Gpus") or []:
+        devices.append(
+            {
+                "name": gpu.get("Name"),
+                "manufacturer": gpu.get("Manufacturer"),
+                "count": int(gpu.get("Count") or 0),
+            }
+        )
+    for fpga in (it.get("FpgaInfo") or {}).get("Fpgas") or []:
+        devices.append(
+            {
+                "name": fpga.get("Name") or "FPGA",
+                "manufacturer": fpga.get("Manufacturer") or "Xilinx",
+                "count": int(fpga.get("Count") or 0),
+            }
+        )
+    for acc in (it.get("InferenceAcceleratorInfo") or {}).get("Accelerators") or []:
+        devices.append(
+            {
+                "name": acc.get("Name") or "Inferentia",
+                "manufacturer": acc.get("Manufacturer") or "Amazon",
+                "count": int(acc.get("Count") or 0),
+            }
+        )
+    neuron = it.get("NeuronInfo") or {}
+    for acc in neuron.get("NeuronDevices") or neuron.get("Accelerators") or []:
+        devices.append(
+            {
+                "name": acc.get("Name") or "Trainium",
+                "manufacturer": acc.get("Manufacturer") or "Amazon",
+                "count": int(acc.get("Count") or acc.get("DeviceCount") or 0),
+            }
+        )
+    return [d for d in devices if d["count"] > 0]
 
 
 def build_description(
@@ -128,8 +182,7 @@ def build_description(
     vcpus: int,
     ram_mib: int,
     usage_classes: list[str],
-    gpu_name: str | None,
-    gpu_count: int | None,
+    accelerators: list[dict[str, Any]],
     family_label: str | None = None,
 ) -> str:
     type_family = instance_type.split(".", 1)[0]
@@ -141,8 +194,8 @@ def build_description(
         f"{ram_mib} MiB RAM",
         f"usage: {classes}",
     ]
-    if gpu_name and gpu_count:
-        parts.append(f"{gpu_count}x {gpu_name}")
+    for acc in accelerators:
+        parts.append(f"{acc['count']}x {acc['name']}")
     return "; ".join(parts)
 
 
@@ -152,21 +205,7 @@ def template_from_aws(it: dict[str, Any]) -> dict[str, Any]:
     ram_mib = int(it["MemoryInfo"]["SizeInMiB"])
     archs = map_archs(list(it.get("ProcessorInfo", {}).get("SupportedArchitectures", [])))
     usage = list(it.get("SupportedUsageClasses", []))
-
-    gpu_info = it.get("GpuInfo") or {}
-    gpu_devices = list(gpu_info.get("Gpus") or [])
-    gpu_name = None
-    gpu_count = None
-    manufacturer = None
-    if gpu_devices:
-        # Aggregate identical NVIDIA devices; AWS usually lists one entry with Count.
-        first = gpu_devices[0]
-        manufacturer = first.get("Manufacturer")
-        gpu_name = first.get("Name")
-        gpu_count = int(first.get("Count") or 0)
-        for extra in gpu_devices[1:]:
-            if (extra.get("Name") or "") == (gpu_name or ""):
-                gpu_count += int(extra.get("Count") or 0)
+    accelerators = collect_accelerators(it)
 
     family_label = it.get("_Family")
     tmpl: dict[str, Any] = {
@@ -177,8 +216,7 @@ def template_from_aws(it: dict[str, Any]) -> dict[str, Any]:
                 vcpus,
                 ram_mib,
                 usage,
-                gpu_name,
-                gpu_count,
+                accelerators,
                 family_label=family_label if isinstance(family_label, str) else None,
             ),
         },
@@ -195,19 +233,21 @@ def template_from_aws(it: dict[str, Any]) -> dict[str, Any]:
         },
     }
 
-    if gpu_name and gpu_count and is_nvidia_gpu(manufacturer, gpu_name):
-        model = resolve_nvidia_model(gpu_name)
-        desc = tmpl["info"]["description"]
-        if model == "0000":
-            desc = f"{desc}; unmapped NVIDIA GPU model (review pci.model)"
-            tmpl["info"]["description"] = desc
+    if accelerators:
+        # Merge identical vendor/model rows.
+        merged: dict[tuple[str, str], int] = {}
+        unmapped = False
+        for acc in accelerators:
+            vendor, model = resolve_accelerator(acc.get("manufacturer"), acc.get("name"))
+            if model == "0000":
+                unmapped = True
+            key = (vendor, model)
+            merged[key] = merged.get(key, 0) + int(acc["count"])
         tmpl["pci"] = [
-            {
-                "vendor": NVIDIA_VENDOR,
-                "model": model,
-                "quantity": gpu_count,
-            }
+            {"vendor": v, "model": m, "quantity": q} for (v, m), q in merged.items()
         ]
+        if unmapped:
+            tmpl["info"]["description"] += "; unmapped accelerator model (review pci.model)"
 
     return tmpl
 

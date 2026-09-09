@@ -1,7 +1,7 @@
 {
     "info": {
         "name": "g7.8xlarge",
-        "description": "AWS EC2 g7.8xlarge (GPU instance); 32 vCPU; 131072 MiB RAM; usage: on-demand, spot; 1x NVIDIA RTX PRO 4500 Blackwell; unmapped NVIDIA GPU model (review pci.model)"
+        "description": "AWS EC2 g7.8xlarge (GPU instance); 32 vCPU; 131072 MiB RAM; usage: on-demand, spot; 1x NVIDIA RTX PRO 4500 Blackwell"
     },
     "cpu": {
         "slots": 32,
@@ -22,7 +22,7 @@
     "pci": [
         {
             "vendor": "10de",
-            "model": "0000",
+            "model": "2b21",
             "quantity": 1
         }
     ]

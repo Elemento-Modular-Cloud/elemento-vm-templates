@@ -28,4 +28,4 @@ python3 scripts/generate_aws_templates.py --source aws --region us-east-1
 python3 scripts/generate_aws_templates.py --source vantage
 ```
 
-Mapping: advertised vCPUs → `cpu.slots`, memory MiB → `ram.ramsize`, architectures → `cpu.archs`, NVIDIA GPUs → `pci` (`vendor` `10de` + device model ID).
+Mapping: advertised vCPUs → `cpu.slots`, memory MiB → `ram.ramsize`, architectures → `cpu.archs`, any accelerator (NVIDIA/AMD/Qualcomm/etc.) → `pci`.

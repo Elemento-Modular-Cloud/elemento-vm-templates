@@ -18,5 +18,12 @@
     "ram": {
         "ramsize": 16384,
         "reqECC": false
-    }
+    },
+    "pci": [
+        {
+            "vendor": "1002",
+            "model": "73a1",
+            "quantity": 1
+        }
+    ]
 }

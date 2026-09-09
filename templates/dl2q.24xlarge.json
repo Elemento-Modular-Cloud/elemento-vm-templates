@@ -18,5 +18,12 @@
     "ram": {
         "ramsize": 786432,
         "reqECC": false
-    }
+    },
+    "pci": [
+        {
+            "vendor": "17cb",
+            "model": "a100",
+            "quantity": 8
+        }
+    ]
 }
