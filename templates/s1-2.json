@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "s1-2",
+        "description": "OVHcloud s1-2 (s1); 1 vCPU; 2048 MiB RAM"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 2048,
+        "reqECC": false
+    }
+}

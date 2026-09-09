@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "rtx5000-84",
+        "description": "OVHcloud rtx5000-84 (rtx5000); 16 vCPU; 86016 MiB RAM; 3x Quadro-RTX5000"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 86016,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1e30",
+            "quantity": 3
+        }
+    ]
+}

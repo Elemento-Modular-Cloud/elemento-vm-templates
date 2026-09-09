@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g3-120",
+        "description": "OVHcloud g3-120 (g3); 32 vCPU; 122880 MiB RAM; 3x GeForce GTX 1080 Ti"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 122880,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1b06",
+            "quantity": 3
+        }
+    ]
+}

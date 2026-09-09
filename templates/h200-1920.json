@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "h200-1920",
+        "description": "OVHcloud h200-1920 (h200); 224 vCPU; 1966080 MiB RAM; 8x H200"
+    },
+    "cpu": {
+        "slots": 224,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1966080,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2335",
+            "quantity": 8
+        }
+    ]
+}

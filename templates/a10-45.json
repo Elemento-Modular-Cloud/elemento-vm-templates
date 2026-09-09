@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a10-45",
+        "description": "OVHcloud a10-45 (a10); 30 vCPU; 43008 MiB RAM; 1x A10"
+    },
+    "cpu": {
+        "slots": 30,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 43008,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2236",
+            "quantity": 1
+        }
+    ]
+}

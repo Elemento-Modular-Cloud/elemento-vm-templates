@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "t2-180",
+        "description": "OVHcloud t2-180 (t2); 60 vCPU; 184320 MiB RAM; 4x Tesla V100S"
+    },
+    "cpu": {
+        "slots": 60,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 184320,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1df6",
+            "quantity": 4
+        }
+    ]
+}

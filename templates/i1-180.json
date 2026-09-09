@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "i1-180",
+        "description": "OVHcloud i1-180 (i1); 32 vCPU; 184320 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 184320,
+        "reqECC": false
+    }
+}

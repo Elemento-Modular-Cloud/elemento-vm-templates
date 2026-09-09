@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "rtx5000-28",
+        "description": "OVHcloud rtx5000-28 (rtx5000); 4 vCPU; 28672 MiB RAM; 1x Quadro-RTX5000"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 28672,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1e30",
+            "quantity": 1
+        }
+    ]
+}

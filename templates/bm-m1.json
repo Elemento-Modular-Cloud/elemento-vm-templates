@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "bm-m1",
+        "description": "OVHcloud bm-m1 (bm); 8 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

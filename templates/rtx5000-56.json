@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "rtx5000-56",
+        "description": "OVHcloud rtx5000-56 (rtx5000); 8 vCPU; 57344 MiB RAM; 2x Quadro-RTX5000"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 57344,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1e30",
+            "quantity": 2
+        }
+    ]
+}

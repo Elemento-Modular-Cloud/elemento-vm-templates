@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "sp-120",
+        "description": "OVHcloud sp-120 (sp); 8 vCPU; 122880 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 122880,
+        "reqECC": false
+    }
+}

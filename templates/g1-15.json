@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g1-15",
+        "description": "OVHcloud g1-15 (g1); 4 vCPU; 15360 MiB RAM; 1x GeForce GTX 1060"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 15360,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1c03",
+            "quantity": 1
+        }
+    ]
+}

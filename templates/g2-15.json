@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g2-15",
+        "description": "OVHcloud g2-15 (g2); 4 vCPU; 15360 MiB RAM; 1x GeForce GTX 1070"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 15360,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1b81",
+            "quantity": 1
+        }
+    ]
+}

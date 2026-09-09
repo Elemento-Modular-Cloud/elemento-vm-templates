@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "l4-360",
+        "description": "OVHcloud l4-360 (l4); 90 vCPU; 368640 MiB RAM; 4x L4"
+    },
+    "cpu": {
+        "slots": 90,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 368640,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "27b8",
+            "quantity": 4
+        }
+    ]
+}

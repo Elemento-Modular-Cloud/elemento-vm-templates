@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g1-30",
+        "description": "OVHcloud g1-30 (g1); 8 vCPU; 30720 MiB RAM; 1x GeForce GTX 1060"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 30720,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1c03",
+            "quantity": 1
+        }
+    ]
+}

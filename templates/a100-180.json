@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a100-180",
+        "description": "OVHcloud a100-180 (a100); 15 vCPU; 184320 MiB RAM; 1x A100"
+    },
+    "cpu": {
+        "slots": 15,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 184320,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "20b0",
+            "quantity": 1
+        }
+    ]
+}

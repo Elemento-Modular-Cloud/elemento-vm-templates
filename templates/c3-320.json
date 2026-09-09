@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3-320",
+        "description": "OVHcloud c3-320 (c3); 160 vCPU; 327680 MiB RAM"
+    },
+    "cpu": {
+        "slots": 160,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 327680,
+        "reqECC": false
+    }
+}

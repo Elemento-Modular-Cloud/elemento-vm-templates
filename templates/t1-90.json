@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "t1-90",
+        "description": "OVHcloud t1-90 (t1); 18 vCPU; 92160 MiB RAM; 2x Tesla V100"
+    },
+    "cpu": {
+        "slots": 18,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 92160,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1db4",
+            "quantity": 2
+        }
+    ]
+}

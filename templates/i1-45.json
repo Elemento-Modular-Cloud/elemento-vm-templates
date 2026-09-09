@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "i1-45",
+        "description": "OVHcloud i1-45 (i1); 8 vCPU; 46080 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 46080,
+        "reqECC": false
+    }
+}

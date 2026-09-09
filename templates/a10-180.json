@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a10-180",
+        "description": "OVHcloud a10-180 (a10); 120 vCPU; 174080 MiB RAM; 4x A10"
+    },
+    "cpu": {
+        "slots": 120,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 174080,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2236",
+            "quantity": 4
+        }
+    ]
+}

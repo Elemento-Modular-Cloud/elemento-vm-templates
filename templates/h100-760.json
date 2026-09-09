@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "h100-760",
+        "description": "OVHcloud h100-760 (h100); 60 vCPU; 778240 MiB RAM; 2x H100"
+    },
+    "cpu": {
+        "slots": 60,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 778240,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 2
+        }
+    ]
+}

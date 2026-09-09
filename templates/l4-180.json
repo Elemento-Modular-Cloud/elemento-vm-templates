@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "l4-180",
+        "description": "OVHcloud l4-180 (l4); 45 vCPU; 184320 MiB RAM; 2x L4"
+    },
+    "cpu": {
+        "slots": 45,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 184320,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "27b8",
+            "quantity": 2
+        }
+    ]
+}

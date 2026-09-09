@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g2-30",
+        "description": "OVHcloud g2-30 (g2); 8 vCPU; 30720 MiB RAM; 1x GeForce GTX 1070"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 30720,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1b81",
+            "quantity": 1
+        }
+    ]
+}

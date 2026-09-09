@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "t1-le-45",
+        "description": "OVHcloud t1-le-45 (t1); 8 vCPU; 46080 MiB RAM; 1x Tesla V100"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 46080,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1db4",
+            "quantity": 1
+        }
+    ]
+}
