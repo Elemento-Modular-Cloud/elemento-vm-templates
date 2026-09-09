@@ -28,4 +28,4 @@ python3 scripts/generate_scaleway_templates.py
 python3 scripts/generate_scaleway_templates.py --zones fr-par-1,nl-ams-1,pl-waw-1
 ```
 
-Mapping: `ncpus` → `cpu.slots`, RAM bytes → `ram.ramsize` (MiB), `arch` → `cpu.archs`, NVIDIA `gpu`/`gpu_info` → `pci`.
+Mapping: `ncpus` → `cpu.slots`, RAM bytes → `ram.ramsize` (MiB), `arch` → `cpu.archs`, any accelerator in `gpu`/`gpu_info` → `pci`.

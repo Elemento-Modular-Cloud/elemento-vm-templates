@@ -13,21 +13,24 @@ from pathlib import Path
 from typing import Any
 
 NVIDIA_VENDOR = "10de"
-NVIDIA_GPU_MODEL_IDS: dict[str, str] = {
-    "p100": "15f8",
-    "l4": "27b8",
-    "l40s": "26b9",
-    "l40": "26b5",
-    "h100-pcie": "2331",
-    "h100-sxm": "2330",
-    "h100": "2330",
-    "h200": "2335",
-    "b300-sxm": "3182",
-    "b300": "3182",
-    "b200": "2901",
-    "t4": "1eb8",
-    "v100": "1db4",
-    "a100": "20b0",
+AMD_VENDOR = "1002"
+UNKNOWN_VENDOR = "0000"
+
+ACCELERATOR_MODEL_IDS: dict[str, tuple[str, str]] = {
+    "p100": (NVIDIA_VENDOR, "15f8"),
+    "l4": (NVIDIA_VENDOR, "27b8"),
+    "l40s": (NVIDIA_VENDOR, "26b9"),
+    "l40": (NVIDIA_VENDOR, "26b5"),
+    "h100-pcie": (NVIDIA_VENDOR, "2331"),
+    "h100-sxm": (NVIDIA_VENDOR, "2330"),
+    "h100": (NVIDIA_VENDOR, "2330"),
+    "h200": (NVIDIA_VENDOR, "2335"),
+    "b300-sxm": (NVIDIA_VENDOR, "3182"),
+    "b300": (NVIDIA_VENDOR, "3182"),
+    "b200": (NVIDIA_VENDOR, "2901"),
+    "t4": (NVIDIA_VENDOR, "1eb8"),
+    "v100": (NVIDIA_VENDOR, "1db4"),
+    "a100": (NVIDIA_VENDOR, "20b0"),
 }
 
 DEFAULT_ZONES = [
@@ -64,14 +67,16 @@ def cpu_flags(archs: list[str]) -> list[str]:
     return []
 
 
-def resolve_nvidia_model(gpu_name: str) -> str:
-    name = gpu_name.strip().lower()
-    if name in NVIDIA_GPU_MODEL_IDS:
-        return NVIDIA_GPU_MODEL_IDS[name]
-    for key, model in sorted(NVIDIA_GPU_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
-        if key in name:
-            return model
-    return "0000"
+def resolve_accelerator(manufacturer: str | None, gpu_name: str | None) -> tuple[str, str]:
+    blob = f"{manufacturer or ''} {gpu_name or ''}".lower()
+    for key, (vendor, model) in sorted(ACCELERATOR_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
+        if key in blob:
+            return vendor, model
+    if "amd" in blob or "radeon" in blob:
+        return AMD_VENDOR, "0000"
+    if "nvidia" in blob or manufacturer == "":
+        return NVIDIA_VENDOR, "0000"
+    return UNKNOWN_VENDOR, "0000"
 
 
 def bytes_to_mib(n: int) -> int:
@@ -108,13 +113,12 @@ def template_from_product(name: str, info: dict[str, Any]) -> dict[str, Any]:
         "ram": {"ramsize": ram_mib, "reqECC": False},
     }
 
-    if gpu_count and gpu_name and ("nvidia" in manufacturer or manufacturer == ""):
-        # Scaleway GPU instances are NVIDIA; treat empty manufacturer + known name as NVIDIA.
-        model = resolve_nvidia_model(str(gpu_name))
+    if gpu_count and gpu_name:
+        vendor, model = resolve_accelerator(manufacturer, str(gpu_name))
         if model == "0000":
-            tmpl["info"]["description"] += "; unmapped NVIDIA GPU model (review pci.model)"
+            tmpl["info"]["description"] += "; unmapped accelerator model (review pci.model)"
         tmpl["pci"] = [
-            {"vendor": NVIDIA_VENDOR, "model": model, "quantity": gpu_count}
+            {"vendor": vendor, "model": model, "quantity": gpu_count}
         ]
     return tmpl
 
