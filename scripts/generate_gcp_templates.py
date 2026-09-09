@@ -14,22 +14,33 @@ from pathlib import Path
 from typing import Any
 
 NVIDIA_VENDOR = "10de"
-NVIDIA_GPU_MODEL_IDS: dict[str, str] = {
-    "nvidia-tesla-t4": "1eb8",
-    "nvidia-tesla-v100": "1db4",
-    "nvidia-tesla-p100": "15f8",
-    "nvidia-tesla-p4": "1bb3",
-    "nvidia-tesla-k80": "102d",
-    "nvidia-tesla-a100": "20b0",
-    "nvidia-a100-80gb": "20b5",
-    "nvidia-l4": "27b8",
-    "nvidia-l40s": "26b9",
-    "nvidia-h100-80gb": "2330",
-    "nvidia-h100-mega-80gb": "2330",
-    "nvidia-h200-141gb": "2335",
-    "nvidia-h200": "2335",
-    "nvidia-tesla-a100-80gb": "20b5",
-    "nvidia-rtx-pro-6000": "2bb5",
+AMD_VENDOR = "1002"
+INTEL_VENDOR = "8086"
+HABANA_VENDOR = "1da3"
+GOOGLE_VENDOR = "1ae0"
+UNKNOWN_VENDOR = "0000"
+
+ACCELERATOR_MODEL_IDS: dict[str, tuple[str, str]] = {
+    "nvidia-tesla-t4": (NVIDIA_VENDOR, "1eb8"),
+    "nvidia-tesla-v100": (NVIDIA_VENDOR, "1db4"),
+    "nvidia-tesla-p100": (NVIDIA_VENDOR, "15f8"),
+    "nvidia-tesla-p4": (NVIDIA_VENDOR, "1bb3"),
+    "nvidia-tesla-k80": (NVIDIA_VENDOR, "102d"),
+    "nvidia-tesla-a100": (NVIDIA_VENDOR, "20b0"),
+    "nvidia-a100-80gb": (NVIDIA_VENDOR, "20b5"),
+    "nvidia-l4": (NVIDIA_VENDOR, "27b8"),
+    "nvidia-l40s": (NVIDIA_VENDOR, "26b9"),
+    "nvidia-h100-80gb": (NVIDIA_VENDOR, "2330"),
+    "nvidia-h100-mega-80gb": (NVIDIA_VENDOR, "2330"),
+    "nvidia-h200-141gb": (NVIDIA_VENDOR, "2335"),
+    "nvidia-h200": (NVIDIA_VENDOR, "2335"),
+    "nvidia-tesla-a100-80gb": (NVIDIA_VENDOR, "20b5"),
+    "nvidia-rtx-pro-6000": (NVIDIA_VENDOR, "2bb5"),
+    "amd": (AMD_VENDOR, "0000"),
+    "radeon": (AMD_VENDOR, "0000"),
+    "gaudi": (HABANA_VENDOR, "1000"),
+    "habana": (HABANA_VENDOR, "1000"),
+    "tpu": (GOOGLE_VENDOR, "0000"),
 }
 
 # GCP families known to be Arm (Ampere Altra / Google Axion).
@@ -38,21 +49,22 @@ ARM_FAMILY_PREFIXES = ("t2a-", "c4a-", "n4a-")
 VANTAGE_GCP_URL = "https://instances.vantage.sh/gcp/instances.json"
 
 
-def resolve_nvidia_model(gpu_name: str) -> str:
-    name = gpu_name.strip().lower()
-    if name in NVIDIA_GPU_MODEL_IDS:
-        return NVIDIA_GPU_MODEL_IDS[name]
-    for key, model in sorted(NVIDIA_GPU_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
-        if key in name:
-            return model
-    return "0000"
-
-
-def is_nvidia_accelerator(accel_type: str | None) -> bool:
+def resolve_accelerator(accel_type: str | None) -> tuple[str, str]:
     blob = (accel_type or "").lower()
-    if any(tok in blob for tok in ("amd", "radeon", "tpu", "intel-")):
-        return False
-    return "nvidia" in blob or "tesla" in blob or "l4" in blob or "h100" in blob or "h200" in blob or "a100" in blob
+    for key, (vendor, model) in sorted(ACCELERATOR_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
+        if key in blob:
+            return vendor, model
+    if "amd" in blob or "radeon" in blob:
+        return AMD_VENDOR, "0000"
+    if "habana" in blob or "gaudi" in blob:
+        return HABANA_VENDOR, "0000"
+    if "tpu" in blob:
+        return GOOGLE_VENDOR, "0000"
+    if "intel" in blob:
+        return INTEL_VENDOR, "0000"
+    if "nvidia" in blob or "tesla" in blob:
+        return NVIDIA_VENDOR, "0000"
+    return UNKNOWN_VENDOR, "0000"
 
 
 def infer_archs(instance_type: str, architecture: str | None = None) -> list[str]:
@@ -104,27 +116,34 @@ def template_from_machine(mt: dict[str, Any]) -> dict[str, Any]:
     family_label = mt.get("_Family") or family_of(instance_type)
 
     accelerators = list(mt.get("accelerators") or [])
-    gpu_name = None
-    gpu_count = 0
-    nvidia_pci: list[dict[str, Any]] = []
+    accel_bits: list[tuple[str, int]] = []
+    pci_rows: list[dict[str, Any]] = []
     for accel in accelerators:
         atype = accel.get("guestAcceleratorType") or accel.get("type") or ""
         count = int(accel.get("guestAcceleratorCount") or accel.get("count") or 0)
-        if not count:
+        if not count or not atype:
             continue
-        if is_nvidia_accelerator(atype):
-            model = resolve_nvidia_model(atype)
-            nvidia_pci.append(
-                {"vendor": NVIDIA_VENDOR, "model": model, "quantity": count}
-            )
-            gpu_name = atype
-            gpu_count += count
+        vendor, model = resolve_accelerator(atype)
+        pci_rows.append({"vendor": vendor, "model": model, "quantity": count})
+        accel_bits.append((atype, count))
+
+    gpu_name = accel_bits[0][0] if len(accel_bits) == 1 else (
+        ", ".join(f"{c}x {n}" for n, c in accel_bits) if accel_bits else None
+    )
+    gpu_count = sum(c for _, c in accel_bits) if len(accel_bits) == 1 else (
+        None if not accel_bits else sum(c for _, c in accel_bits)
+    )
+    # Keep description helper happy: single name+count or synthesize below.
+    if len(accel_bits) == 1:
+        desc_name, desc_count = accel_bits[0][0], accel_bits[0][1]
+    else:
+        desc_name, desc_count = None, None
 
     tmpl: dict[str, Any] = {
         "info": {
             "name": instance_type,
             "description": build_description(
-                instance_type, family_label, vcpus, ram_mib, gpu_name, gpu_count or None
+                instance_type, family_label, vcpus, ram_mib, desc_name, desc_count
             ),
         },
         "cpu": {
@@ -139,17 +158,18 @@ def template_from_machine(mt: dict[str, Any]) -> dict[str, Any]:
             "reqECC": False,
         },
     }
-    if nvidia_pci:
-        # Merge identical vendor/model rows.
+    if len(accel_bits) > 1:
+        tmpl["info"]["description"] += "; " + ", ".join(f"{c}x {n}" for n, c in accel_bits)
+    if pci_rows:
         merged: dict[tuple[str, str], int] = {}
-        for row in nvidia_pci:
+        for row in pci_rows:
             key = (row["vendor"], row["model"])
             merged[key] = merged.get(key, 0) + int(row["quantity"])
         tmpl["pci"] = [
             {"vendor": v, "model": m, "quantity": q} for (v, m), q in merged.items()
         ]
         if any(p["model"] == "0000" for p in tmpl["pci"]):
-            tmpl["info"]["description"] += "; unmapped NVIDIA GPU model (review pci.model)"
+            tmpl["info"]["description"] += "; unmapped accelerator model (review pci.model)"
     return tmpl
 
 

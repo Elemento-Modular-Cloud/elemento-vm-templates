@@ -28,4 +28,4 @@ python3 scripts/generate_gcp_templates.py --source gcloud --project YOUR_PROJECT
 python3 scripts/generate_gcp_templates.py --source vantage
 ```
 
-Mapping: advertised vCPUs → `cpu.slots`, memory MiB → `ram.ramsize`, architectures → `cpu.archs` (Arm families `t2a`/`c4a`/`n4a` → `AARCH64`), NVIDIA accelerators → `pci`.
+Mapping: advertised vCPUs → `cpu.slots`, memory MiB → `ram.ramsize`, architectures → `cpu.archs` (Arm families `t2a`/`c4a`/`n4a` → `AARCH64`), any accelerator → `pci`.
