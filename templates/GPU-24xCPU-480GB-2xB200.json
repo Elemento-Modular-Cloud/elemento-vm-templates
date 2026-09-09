@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "GPU-24xCPU-480GB-2xB200",
+        "description": "UpCloud GPU-24xCPU-480GB-2xB200 (GPU); 24 vCPU; 491520 MiB RAM; 2x NVIDIA B200"
+    },
+    "cpu": {
+        "slots": 24,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 491520,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2901",
+            "quantity": 2
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "2xCPU-8GB",
+        "description": "UpCloud 2xCPU-8GB (CLOUD); 2 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

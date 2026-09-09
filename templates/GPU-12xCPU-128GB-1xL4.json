@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "GPU-12xCPU-128GB-1xL4",
+        "description": "UpCloud GPU-12xCPU-128GB-1xL4 (GPU); 12 vCPU; 131072 MiB RAM; 1x NVIDIA L4"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "27b8",
+            "quantity": 1
+        }
+    ]
+}

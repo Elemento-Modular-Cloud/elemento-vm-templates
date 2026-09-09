@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "20xCPU-96GB",
+        "description": "UpCloud 20xCPU-96GB (CLOUD); 20 vCPU; 98304 MiB RAM"
+    },
+    "cpu": {
+        "slots": 20,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 98304,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "GPU-20xCPU-256GB-3xL40S",
+        "description": "UpCloud GPU-20xCPU-256GB-3xL40S (GPU); 20 vCPU; 262144 MiB RAM; 3x NVIDIA L40S"
+    },
+    "cpu": {
+        "slots": 20,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "26b9",
+            "quantity": 3
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "GPU-16xCPU-192GB-1xL40S",
+        "description": "UpCloud GPU-16xCPU-192GB-1xL40S (GPU); 16 vCPU; 196608 MiB RAM; 1x NVIDIA L40S"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "26b9",
+            "quantity": 1
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "GPU-12xCPU-240GB-1xB200",
+        "description": "UpCloud GPU-12xCPU-240GB-1xB200 (GPU); 12 vCPU; 245760 MiB RAM; 1x NVIDIA B200"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 245760,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2901",
+            "quantity": 1
+        }
+    ]
+}

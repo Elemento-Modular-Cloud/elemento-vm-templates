@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "24xCPU-256GB",
+        "description": "UpCloud 24xCPU-256GB (CLOUD); 24 vCPU; 262144 MiB RAM"
+    },
+    "cpu": {
+        "slots": 24,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

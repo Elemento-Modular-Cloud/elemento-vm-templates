@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "GPU-96xCPU-1920GB-8xH100",
+        "description": "UpCloud GPU-96xCPU-1920GB-8xH100 (GPU); 96 vCPU; 1966080 MiB RAM; 8x NVIDIA H100"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1966080,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 8
+        }
+    ]
+}

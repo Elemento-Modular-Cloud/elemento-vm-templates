@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "1xCPU-4GB",
+        "description": "UpCloud 1xCPU-4GB (CLOUD); 1 vCPU; 4096 MiB RAM"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 4096,
+        "reqECC": false
+    }
+}
