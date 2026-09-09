@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_HB120-96rs_v3",
+        "description": "Azure Standard_HB120-96rs_v3 (hbv3/highperformancecompute); 120 vCPU; 466944 MiB RAM"
+    },
+    "cpu": {
+        "slots": 120,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 466944,
+        "reqECC": false
+    }
+}

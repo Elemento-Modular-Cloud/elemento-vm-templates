@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_EC48ads_v6",
+        "description": "Azure Standard_EC48ads_v6 (ecadsv6/generalpurpose); 48 vCPU; 262144 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

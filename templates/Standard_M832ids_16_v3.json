@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M832ids_16_v3",
+        "description": "Azure Standard_M832ids_16_v3 (mdsv3/memoryoptimized); 832 vCPU; 15564800 MiB RAM"
+    },
+    "cpu": {
+        "slots": 832,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 15564800,
+        "reqECC": false
+    }
+}

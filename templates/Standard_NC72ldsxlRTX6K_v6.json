@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC72ldsxlRTX6K_v6",
+        "description": "Azure Standard_NC72ldsxlRTX6K_v6 (ncldsxlrtx6kv6/gpu); 72 vCPU; 135168 MiB RAM; 1x fractional GPU (0.5)"
+    },
+    "cpu": {
+        "slots": 72,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 135168,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "26b1",
+            "quantity": 1
+        }
+    ]
+}

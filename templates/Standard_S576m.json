@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_S576m",
+        "description": "Azure Standard_S576m (saphana/memoryoptimized); 576 vCPU; 12288000 MiB RAM"
+    },
+    "cpu": {
+        "slots": 576,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 12288000,
+        "reqECC": false
+    }
+}

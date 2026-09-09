@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NG32adms_V620_v1",
+        "description": "Azure Standard_NG32adms_V620_v1 (ngadsv620/gpu); 32 vCPU; 180224 MiB RAM; 1x Radeon Pro V620"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 180224,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "1002",
+            "model": "73a3",
+            "quantity": 1
+        }
+    ]
+}

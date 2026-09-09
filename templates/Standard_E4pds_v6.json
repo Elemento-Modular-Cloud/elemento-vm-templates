@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_E4pds_v6",
+        "description": "Azure Standard_E4pds_v6 (epdsv6/memoryoptimized); 4 vCPU; 32768 MiB RAM"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

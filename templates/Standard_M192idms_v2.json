@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M192idms_v2",
+        "description": "Azure Standard_M192idms_v2 (mdsv2/memoryoptimized); 192 vCPU; 4194304 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 4194304,
+        "reqECC": false
+    }
+}

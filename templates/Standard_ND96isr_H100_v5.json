@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_ND96isr_H100_v5",
+        "description": "Azure Standard_ND96isr_H100_v5 (ndsrv5/gpu); 96 vCPU; 1945600 MiB RAM; 8x H100"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1945600,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 8
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC48ads_A100_v4",
+        "description": "Azure Standard_NC48ads_A100_v4 (nca100v4/gpu); 48 vCPU; 450560 MiB RAM; 2x A100"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 450560,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "20b0",
+            "quantity": 2
+        }
+    ]
+}

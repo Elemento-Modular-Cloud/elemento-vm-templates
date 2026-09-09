@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M128ms_v2",
+        "description": "Azure Standard_M128ms_v2 (msv2/memoryoptimized); 128 vCPU; 3985408 MiB RAM"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3985408,
+        "reqECC": false
+    }
+}

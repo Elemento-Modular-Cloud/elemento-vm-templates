@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_F16s_v2",
+        "description": "Azure Standard_F16s_v2 (fsv2/computeoptimized); 16 vCPU; 32768 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

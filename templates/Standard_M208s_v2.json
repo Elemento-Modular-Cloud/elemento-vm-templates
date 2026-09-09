@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M208s_v2",
+        "description": "Azure Standard_M208s_v2 (mv2/memoryoptimized); 208 vCPU; 2918400 MiB RAM"
+    },
+    "cpu": {
+        "slots": 208,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 2918400,
+        "reqECC": false
+    }
+}

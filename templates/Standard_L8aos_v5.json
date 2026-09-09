@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_L8aos_v5",
+        "description": "Azure Standard_L8aos_v5 (laosv5/storageoptimized); 8 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

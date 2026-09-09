@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D16pds_v5",
+        "description": "Azure Standard_D16pds_v5 (dpdsv5/generalpurpose); 16 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

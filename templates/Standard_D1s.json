@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D1s",
+        "description": "Azure Standard_D1s (ds/generalpurpose); 1 vCPU; 3584 MiB RAM"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3584,
+        "reqECC": false
+    }
+}

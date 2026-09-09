@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV12s_v3",
+        "description": "Azure Standard_NV12s_v3 (nvv3/gpu); 12 vCPU; 114688 MiB RAM; 1x M60"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 114688,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "13f2",
+            "quantity": 1
+        }
+    ]
+}

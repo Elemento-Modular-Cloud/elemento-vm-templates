@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D2pds_v6",
+        "description": "Azure Standard_D2pds_v6 (dpdsv6/generalpurpose); 2 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

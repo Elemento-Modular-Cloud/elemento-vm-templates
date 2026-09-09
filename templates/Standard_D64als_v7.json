@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D64als_v7",
+        "description": "Azure Standard_D64als_v7 (dalsv7/generalpurpose); 64 vCPU; 131072 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

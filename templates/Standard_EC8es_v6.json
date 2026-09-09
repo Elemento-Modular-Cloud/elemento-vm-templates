@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_EC8es_v6",
+        "description": "Azure Standard_EC8es_v6 (ecesv6/memoryoptimized); 8 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

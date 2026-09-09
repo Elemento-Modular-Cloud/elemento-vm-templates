@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_G5",
+        "description": "Azure Standard_G5 (g/memoryoptimized); 32 vCPU; 458752 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 458752,
+        "reqECC": false
+    }
+}

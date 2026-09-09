@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_B2ps_v2",
+        "description": "Azure Standard_B2ps_v2 (bpsv2/generalpurpose); 2 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

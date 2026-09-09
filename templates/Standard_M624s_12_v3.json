@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M624s_12_v3",
+        "description": "Azure Standard_M624s_12_v3 (msv3/memoryoptimized); 624 vCPU; 11673600 MiB RAM"
+    },
+    "cpu": {
+        "slots": 624,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 11673600,
+        "reqECC": false
+    }
+}

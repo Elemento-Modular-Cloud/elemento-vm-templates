@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_E20ads_v5",
+        "description": "Azure Standard_E20ads_v5 (eadsv5/memoryoptimized); 20 vCPU; 163840 MiB RAM"
+    },
+    "cpu": {
+        "slots": 20,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 163840,
+        "reqECC": false
+    }
+}

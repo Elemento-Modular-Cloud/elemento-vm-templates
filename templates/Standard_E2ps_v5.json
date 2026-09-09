@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_E2ps_v5",
+        "description": "Azure Standard_E2ps_v5 (epsv5/memoryoptimized); 2 vCPU; 16384 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

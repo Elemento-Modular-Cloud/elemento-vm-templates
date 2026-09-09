@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_E2bs_v6",
+        "description": "Azure Standard_E2bs_v6 (ebsv6/memoryoptimized); 2 vCPU; 16384 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_E372ids_v7",
+        "description": "Azure Standard_E372ids_v7 (edsv7/memoryoptimized); 372 vCPU; 2893824 MiB RAM"
+    },
+    "cpu": {
+        "slots": 372,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 2893824,
+        "reqECC": false
+    }
+}

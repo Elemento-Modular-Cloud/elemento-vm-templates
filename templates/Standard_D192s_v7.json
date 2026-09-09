@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D192s_v7",
+        "description": "Azure Standard_D192s_v7 (dsv7/generalpurpose); 192 vCPU; 786432 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    }
+}

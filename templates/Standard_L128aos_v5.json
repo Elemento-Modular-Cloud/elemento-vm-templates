@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_L128aos_v5",
+        "description": "Azure Standard_L128aos_v5 (laosv5/storageoptimized); 128 vCPU; 1048576 MiB RAM"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1048576,
+        "reqECC": false
+    }
+}

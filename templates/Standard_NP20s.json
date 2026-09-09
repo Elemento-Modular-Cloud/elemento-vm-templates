@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_NP20s",
+        "description": "Azure Standard_NP20s (np/gpu); 20 vCPU; 344064 MiB RAM"
+    },
+    "cpu": {
+        "slots": 20,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 344064,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV72ads_A10_v5",
+        "description": "Azure Standard_NV72ads_A10_v5 (nvv5/gpu); 72 vCPU; 901120 MiB RAM; 2x A10"
+    },
+    "cpu": {
+        "slots": 72,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 901120,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2236",
+            "quantity": 2
+        }
+    ]
+}

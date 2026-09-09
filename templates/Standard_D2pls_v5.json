@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D2pls_v5",
+        "description": "Azure Standard_D2pls_v5 (dplsv5/generalpurpose); 2 vCPU; 4096 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 4096,
+        "reqECC": false
+    }
+}

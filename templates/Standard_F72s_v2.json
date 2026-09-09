@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_F72s_v2",
+        "description": "Azure Standard_F72s_v2 (fsv2/computeoptimized); 72 vCPU; 147456 MiB RAM"
+    },
+    "cpu": {
+        "slots": 72,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 147456,
+        "reqECC": false
+    }
+}

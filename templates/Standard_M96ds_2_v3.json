@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M96ds_2_v3",
+        "description": "Azure Standard_M96ds_2_v3 (mdsv3/memoryoptimized); 96 vCPU; 1992704 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1992704,
+        "reqECC": false
+    }
+}

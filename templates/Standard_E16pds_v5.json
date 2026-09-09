@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_E16pds_v5",
+        "description": "Azure Standard_E16pds_v5 (epdsv5/memoryoptimized); 16 vCPU; 131072 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

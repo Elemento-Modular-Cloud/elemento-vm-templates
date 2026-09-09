@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_ND96asr_A100_v4",
+        "description": "Azure Standard_ND96asr_A100_v4 (ndasrv4/gpu); 96 vCPU; 921600 MiB RAM; 8x A100 (NVlink)"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 921600,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "20b0",
+            "quantity": 8
+        }
+    ]
+}

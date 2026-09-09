@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D16plds_v6",
+        "description": "Azure Standard_D16plds_v6 (dpldsv6/generalpurpose); 16 vCPU; 32768 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

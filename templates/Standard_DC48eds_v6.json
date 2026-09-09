@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_DC48eds_v6",
+        "description": "Azure Standard_DC48eds_v6 (dcedsv6/generalpurpose); 48 vCPU; 196608 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}

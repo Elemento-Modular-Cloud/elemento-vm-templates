@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_H8",
+        "description": "Azure Standard_H8 (h/highperformancecompute); 8 vCPU; 57344 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 57344,
+        "reqECC": false
+    }
+}

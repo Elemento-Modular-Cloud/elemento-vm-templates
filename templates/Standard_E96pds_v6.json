@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_E96pds_v6",
+        "description": "Azure Standard_E96pds_v6 (epdsv6/memoryoptimized); 96 vCPU; 688128 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 688128,
+        "reqECC": false
+    }
+}

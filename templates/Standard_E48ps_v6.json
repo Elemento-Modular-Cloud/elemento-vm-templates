@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_E48ps_v6",
+        "description": "Azure Standard_E48ps_v6 (epsv6/memoryoptimized); 48 vCPU; 393216 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

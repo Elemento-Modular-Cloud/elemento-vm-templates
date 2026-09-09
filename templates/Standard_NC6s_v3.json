@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC6s_v3",
+        "description": "Azure Standard_NC6s_v3 (ncsv3/gpu); 6 vCPU; 114688 MiB RAM; 1x V100"
+    },
+    "cpu": {
+        "slots": 6,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 114688,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1db4",
+            "quantity": 1
+        }
+    ]
+}

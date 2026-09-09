@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_L96aos_v5",
+        "description": "Azure Standard_L96aos_v5 (laosv5/storageoptimized); 96 vCPU; 786432 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M24s_v3",
+        "description": "Azure Standard_M24s_v3 (msv3/memoryoptimized); 24 vCPU; 491520 MiB RAM"
+    },
+    "cpu": {
+        "slots": 24,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 491520,
+        "reqECC": false
+    }
+}

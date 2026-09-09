@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_S896ooo",
+        "description": "Azure Standard_S896ooo (saphanagen2/memoryoptimized); 896 vCPU; 7864320 MiB RAM"
+    },
+    "cpu": {
+        "slots": 896,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 7864320,
+        "reqECC": false
+    }
+}

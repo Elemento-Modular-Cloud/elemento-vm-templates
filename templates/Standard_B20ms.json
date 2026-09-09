@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_B20ms",
+        "description": "Azure Standard_B20ms (bs/generalpurpose); 20 vCPU; 81920 MiB RAM"
+    },
+    "cpu": {
+        "slots": 20,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 81920,
+        "reqECC": false
+    }
+}

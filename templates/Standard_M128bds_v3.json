@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M128bds_v3",
+        "description": "Azure Standard_M128bds_v3 (mbdsv3/memoryoptimized); 128 vCPU; 1048576 MiB RAM"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1048576,
+        "reqECC": false
+    }
+}

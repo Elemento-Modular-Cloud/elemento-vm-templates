@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D12_v2",
+        "description": "Azure Standard_D12_v2 (dv2/memoryoptimized); 4 vCPU; 28672 MiB RAM"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 28672,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M176s_4_v3",
+        "description": "Azure Standard_M176s_4_v3 (msv3/memoryoptimized); 176 vCPU; 3985408 MiB RAM"
+    },
+    "cpu": {
+        "slots": 176,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3985408,
+        "reqECC": false
+    }
+}

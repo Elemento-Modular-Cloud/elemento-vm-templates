@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_HB176rs_v4",
+        "description": "Azure Standard_HB176rs_v4 (hbv4/highperformancecompute); 176 vCPU; 786432 MiB RAM"
+    },
+    "cpu": {
+        "slots": 176,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    }
+}

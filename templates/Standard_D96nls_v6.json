@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D96nls_v6",
+        "description": "Azure Standard_D96nls_v6 (dnlsv6/generalpurpose); 96 vCPU; 196608 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}

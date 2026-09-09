@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC12",
+        "description": "Azure Standard_NC12 (nc/gpu); 12 vCPU; 114688 MiB RAM; 2x K80"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 114688,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "102d",
+            "quantity": 2
+        }
+    ]
+}

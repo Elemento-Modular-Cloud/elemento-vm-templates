@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_HX176-96rs",
+        "description": "Azure Standard_HX176-96rs (hx/highperformancecompute); 176 vCPU; 1441792 MiB RAM"
+    },
+    "cpu": {
+        "slots": 176,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1441792,
+        "reqECC": false
+    }
+}

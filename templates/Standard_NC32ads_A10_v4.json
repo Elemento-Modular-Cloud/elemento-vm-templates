@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC32ads_A10_v4",
+        "description": "Azure Standard_NC32ads_A10_v4 (nca10v4/gpu); 32 vCPU; 450560 MiB RAM; 2x A10"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 450560,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2236",
+            "quantity": 2
+        }
+    ]
+}

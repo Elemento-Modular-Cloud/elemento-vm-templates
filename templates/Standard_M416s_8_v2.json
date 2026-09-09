@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M416s_8_v2",
+        "description": "Azure Standard_M416s_8_v2 (mv2/memoryoptimized); 416 vCPU; 7782400 MiB RAM"
+    },
+    "cpu": {
+        "slots": 416,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 7782400,
+        "reqECC": false
+    }
+}

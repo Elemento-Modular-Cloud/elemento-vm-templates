@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_EC32ads_v5",
+        "description": "Azure Standard_EC32ads_v5 (ecadsv5/generalpurpose); 32 vCPU; 196608 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}

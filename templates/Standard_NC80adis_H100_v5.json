@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC80adis_H100_v5",
+        "description": "Azure Standard_NC80adis_H100_v5 (ncadsh100v5/gpu); 80 vCPU; 655360 MiB RAM; 2x H100"
+    },
+    "cpu": {
+        "slots": 80,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 655360,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 2
+        }
+    ]
+}

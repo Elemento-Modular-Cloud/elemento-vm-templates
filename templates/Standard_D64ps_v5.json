@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D64ps_v5",
+        "description": "Azure Standard_D64ps_v5 (dpsv5/generalpurpose); 64 vCPU; 212992 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 212992,
+        "reqECC": false
+    }
+}

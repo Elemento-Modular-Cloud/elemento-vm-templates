@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV28ads_v710_v5",
+        "description": "Azure Standard_NV28ads_v710_v5 (nvadsv710v5/gpu); 28 vCPU; 163840 MiB RAM; 1x V710"
+    },
+    "cpu": {
+        "slots": 28,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 163840,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "1002",
+            "model": "744c",
+            "quantity": 1
+        }
+    ]
+}

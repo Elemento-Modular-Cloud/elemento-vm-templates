@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NCC40ads_H100_v5",
+        "description": "Azure Standard_NCC40ads_H100_v5 (nccadsh100v5/gpu); 40 vCPU; 327680 MiB RAM; 1x H100"
+    },
+    "cpu": {
+        "slots": 40,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 327680,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 1
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV16as_v4",
+        "description": "Azure Standard_NV16as_v4 (nvv4/gpu); 16 vCPU; 57344 MiB RAM; 1x MI25 (8GB VRAM) (fractional 1/2)"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 57344,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "1002",
+            "model": "740c",
+            "quantity": 1
+        }
+    ]
+}

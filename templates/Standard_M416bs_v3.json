@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M416bs_v3",
+        "description": "Azure Standard_M416bs_v3 (mbsv3/memoryoptimized); 416 vCPU; 3891200 MiB RAM"
+    },
+    "cpu": {
+        "slots": 416,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3891200,
+        "reqECC": false
+    }
+}

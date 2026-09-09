@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV6",
+        "description": "Azure Standard_NV6 (nv/gpu); 6 vCPU; 57344 MiB RAM; 1x M60"
+    },
+    "cpu": {
+        "slots": 6,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 57344,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "13f2",
+            "quantity": 1
+        }
+    ]
+}

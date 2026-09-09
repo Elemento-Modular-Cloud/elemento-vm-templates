@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M48s_1_v3",
+        "description": "Azure Standard_M48s_1_v3 (msv3/memoryoptimized); 48 vCPU; 997376 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 997376,
+        "reqECC": false
+    }
+}

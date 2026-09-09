@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV12",
+        "description": "Azure Standard_NV12 (nv/gpu); 12 vCPU; 114688 MiB RAM; 2x M60"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 114688,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "13f2",
+            "quantity": 2
+        }
+    ]
+}

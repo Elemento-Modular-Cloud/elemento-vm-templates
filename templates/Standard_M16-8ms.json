@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M16-8ms",
+        "description": "Azure Standard_M16-8ms (m/memoryoptimized); 16 vCPU; 448000 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 448000,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_A1",
+        "description": "Azure Standard_A1 (a/generalpurpose); 1 vCPU; 1792 MiB RAM"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1792,
+        "reqECC": false
+    }
+}

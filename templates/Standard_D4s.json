@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D4s",
+        "description": "Azure Standard_D4s (ds/generalpurpose); 8 vCPU; 28672 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 28672,
+        "reqECC": false
+    }
+}

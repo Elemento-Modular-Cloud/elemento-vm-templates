@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_S224m",
+        "description": "Azure Standard_S224m (saphanagen2/memoryoptimized); 224 vCPU; 6291456 MiB RAM"
+    },
+    "cpu": {
+        "slots": 224,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 6291456,
+        "reqECC": false
+    }
+}

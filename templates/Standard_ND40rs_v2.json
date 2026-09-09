@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_ND40rs_v2",
+        "description": "Azure Standard_ND40rs_v2 (ndv2/gpu); 40 vCPU; 688128 MiB RAM; 8x V100 (NVlink)"
+    },
+    "cpu": {
+        "slots": 40,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 688128,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1db4",
+            "quantity": 8
+        }
+    ]
+}

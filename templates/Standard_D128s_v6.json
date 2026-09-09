@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D128s_v6",
+        "description": "Azure Standard_D128s_v6 (dsv6/generalpurpose); 128 vCPU; 524288 MiB RAM"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 524288,
+        "reqECC": false
+    }
+}

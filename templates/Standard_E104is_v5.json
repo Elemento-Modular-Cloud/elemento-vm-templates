@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_E104is_v5",
+        "description": "Azure Standard_E104is_v5 (esv5/memoryoptimized); 104 vCPU; 688128 MiB RAM"
+    },
+    "cpu": {
+        "slots": 104,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 688128,
+        "reqECC": false
+    }
+}

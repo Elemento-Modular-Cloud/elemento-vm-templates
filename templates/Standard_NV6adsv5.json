@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV6adsv5",
+        "description": "Azure Standard_NV6adsv5 (nvv5/gpu); 6 vCPU; 56320 MiB RAM; 1x A10 (fractional 1/6)"
+    },
+    "cpu": {
+        "slots": 6,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 56320,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2236",
+            "quantity": 1
+        }
+    ]
+}

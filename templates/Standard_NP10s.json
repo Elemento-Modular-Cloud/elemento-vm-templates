@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_NP10s",
+        "description": "Azure Standard_NP10s (np/gpu); 10 vCPU; 172032 MiB RAM"
+    },
+    "cpu": {
+        "slots": 10,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 172032,
+        "reqECC": false
+    }
+}

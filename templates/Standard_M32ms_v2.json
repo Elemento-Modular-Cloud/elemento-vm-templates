@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_M32ms_v2",
+        "description": "Azure Standard_M32ms_v2 (msv2/memoryoptimized); 32 vCPU; 896000 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 896000,
+        "reqECC": false
+    }
+}

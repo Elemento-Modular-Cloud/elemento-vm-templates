@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_B2ms",
+        "description": "Azure Standard_B2ms (bs/generalpurpose); 2 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

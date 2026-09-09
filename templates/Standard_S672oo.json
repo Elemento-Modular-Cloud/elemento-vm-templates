@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_S672oo",
+        "description": "Azure Standard_S672oo (saphanagen2/memoryoptimized); 672 vCPU; 4718592 MiB RAM"
+    },
+    "cpu": {
+        "slots": 672,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 4718592,
+        "reqECC": false
+    }
+}

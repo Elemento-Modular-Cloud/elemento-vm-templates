@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC64as_T4_v3",
+        "description": "Azure Standard_NC64as_T4_v3 (ncast4v3/gpu); 64 vCPU; 450560 MiB RAM; 4x T4"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 450560,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "1eb8",
+            "quantity": 4
+        }
+    ]
+}

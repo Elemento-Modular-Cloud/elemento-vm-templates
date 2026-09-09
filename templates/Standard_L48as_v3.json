@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_L48as_v3",
+        "description": "Azure Standard_L48as_v3 (lasv3/storageoptimized); 48 vCPU; 393216 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

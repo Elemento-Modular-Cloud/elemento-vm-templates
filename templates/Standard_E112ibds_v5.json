@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_E112ibds_v5",
+        "description": "Azure Standard_E112ibds_v5 (ebdsv5/memoryoptimized); 112 vCPU; 688128 MiB RAM"
+    },
+    "cpu": {
+        "slots": 112,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 688128,
+        "reqECC": false
+    }
+}

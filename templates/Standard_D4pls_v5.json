@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D4pls_v5",
+        "description": "Azure Standard_D4pls_v5 (dplsv5/generalpurpose); 4 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

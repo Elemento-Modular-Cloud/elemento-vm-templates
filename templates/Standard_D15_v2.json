@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D15_v2",
+        "description": "Azure Standard_D15_v2 (dv2/memoryoptimized); 20 vCPU; 143360 MiB RAM"
+    },
+    "cpu": {
+        "slots": 20,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 143360,
+        "reqECC": false
+    }
+}

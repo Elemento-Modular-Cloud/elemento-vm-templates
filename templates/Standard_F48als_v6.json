@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_F48als_v6",
+        "description": "Azure Standard_F48als_v6 (falsv6/computeoptimized); 48 vCPU; 98304 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 98304,
+        "reqECC": false
+    }
+}

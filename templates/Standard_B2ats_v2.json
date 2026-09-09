@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_B2ats_v2",
+        "description": "Azure Standard_B2ats_v2 (basv2/generalpurpose); 2 vCPU; 1024 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1024,
+        "reqECC": false
+    }
+}

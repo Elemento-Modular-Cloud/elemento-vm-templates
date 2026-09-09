@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_F64amds_v7",
+        "description": "Azure Standard_F64amds_v7 (famdsv7/computeoptimized); 64 vCPU; 524288 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 524288,
+        "reqECC": false
+    }
+}

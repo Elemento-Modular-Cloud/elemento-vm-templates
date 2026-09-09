@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_HB368rs_v5",
+        "description": "Azure Standard_HB368rs_v5 (hbv5/highperformancecompute); 368 vCPU; 448512 MiB RAM"
+    },
+    "cpu": {
+        "slots": 368,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 448512,
+        "reqECC": false
+    }
+}

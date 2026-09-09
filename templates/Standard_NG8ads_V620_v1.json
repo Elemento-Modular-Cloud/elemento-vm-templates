@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NG8ads_V620_v1",
+        "description": "Azure Standard_NG8ads_V620_v1 (ngadsv620/gpu); 8 vCPU; 16384 MiB RAM; 1x fractional GPU (fractional 1/4)"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "1002",
+            "model": "73a3",
+            "quantity": 1
+        }
+    ]
+}

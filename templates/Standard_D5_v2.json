@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D5_v2",
+        "description": "Azure Standard_D5_v2 (dv2/generalpurpose); 16 vCPU; 57344 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 57344,
+        "reqECC": false
+    }
+}

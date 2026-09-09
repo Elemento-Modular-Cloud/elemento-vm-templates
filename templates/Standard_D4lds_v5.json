@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D4lds_v5",
+        "description": "Azure Standard_D4lds_v5 (dldsv5/generalpurpose); 4 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

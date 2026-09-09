@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_FX2ms_v2",
+        "description": "Azure Standard_FX2ms_v2 (fxmsv2/computeoptimized); 2 vCPU; 43008 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 43008,
+        "reqECC": false
+    }
+}

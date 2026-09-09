@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D96ads_v7",
+        "description": "Azure Standard_D96ads_v7 (dadsv7/generalpurpose); 96 vCPU; 393216 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

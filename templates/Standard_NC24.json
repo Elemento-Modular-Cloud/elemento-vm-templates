@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NC24",
+        "description": "Azure Standard_NC24 (nc/gpu); 24 vCPU; 229376 MiB RAM; 4x K80"
+    },
+    "cpu": {
+        "slots": 24,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 229376,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "102d",
+            "quantity": 4
+        }
+    ]
+}

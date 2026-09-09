@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_S192xm",
+        "description": "Azure Standard_S192xm (saphana/memoryoptimized); 192 vCPU; 6291456 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 6291456,
+        "reqECC": false
+    }
+}

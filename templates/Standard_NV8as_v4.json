@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV8as_v4",
+        "description": "Azure Standard_NV8as_v4 (nvv4/gpu); 8 vCPU; 28672 MiB RAM; 1x MI25 (4GB VRAM) (fractional 1/4)"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 28672,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "1002",
+            "model": "740c",
+            "quantity": 1
+        }
+    ]
+}

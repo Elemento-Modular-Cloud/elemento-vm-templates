@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D8ds_v5",
+        "description": "Azure Standard_D8ds_v5 (ddsv5/generalpurpose); 8 vCPU; 32768 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

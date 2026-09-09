@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D8pls_v6",
+        "description": "Azure Standard_D8pls_v6 (dplsv6/generalpurpose); 8 vCPU; 16384 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

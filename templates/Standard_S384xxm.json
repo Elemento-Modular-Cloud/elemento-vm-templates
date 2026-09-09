@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_S384xxm",
+        "description": "Azure Standard_S384xxm (saphana/memoryoptimized); 384 vCPU; 12288000 MiB RAM"
+    },
+    "cpu": {
+        "slots": 384,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 12288000,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_L12aos_v4",
+        "description": "Azure Standard_L12aos_v4 (laosv4/storageoptimized); 12 vCPU; 98304 MiB RAM"
+    },
+    "cpu": {
+        "slots": 12,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 98304,
+        "reqECC": false
+    }
+}

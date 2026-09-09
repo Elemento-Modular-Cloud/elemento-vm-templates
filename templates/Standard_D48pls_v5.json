@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D48pls_v5",
+        "description": "Azure Standard_D48pls_v5 (dplsv5/generalpurpose); 48 vCPU; 98304 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 98304,
+        "reqECC": false
+    }
+}

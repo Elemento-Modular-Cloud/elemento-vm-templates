@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Standard_D128lds_v7",
+        "description": "Azure Standard_D128lds_v7 (dldsv7/generalpurpose); 128 vCPU; 262144 MiB RAM"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

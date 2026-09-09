@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "Standard_NV36ads_A10_v5",
+        "description": "Azure Standard_NV36ads_A10_v5 (nvv5/gpu); 36 vCPU; 450560 MiB RAM; 1x A10"
+    },
+    "cpu": {
+        "slots": 36,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 450560,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2236",
+            "quantity": 1
+        }
+    ]
+}

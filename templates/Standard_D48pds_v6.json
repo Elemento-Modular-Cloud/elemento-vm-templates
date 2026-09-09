@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "Standard_D48pds_v6",
+        "description": "Azure Standard_D48pds_v6 (dpdsv6/generalpurpose); 48 vCPU; 196608 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}
