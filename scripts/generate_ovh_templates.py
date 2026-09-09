@@ -13,29 +13,34 @@ from pathlib import Path
 from typing import Any
 
 NVIDIA_VENDOR = "10de"
-NVIDIA_GPU_MODEL_IDS: dict[str, str] = {
-    "tesla v100s": "1df6",
-    "tesla v100": "1db4",
-    "v100s": "1df6",
-    "v100": "1db4",
-    "l4": "27b8",
-    "l40s": "26b9",
-    "l40": "26b5",
-    "h100": "2330",
-    "h200": "2335",
-    "a100": "20b0",
-    "a10": "2236",
-    "quadro-rtx5000": "1e30",
-    "quadro rtx 5000": "1e30",
-    "rtx5000": "1e30",
-    "rtx 5000": "1e30",
-    "geforce gtx 1060": "1c03",
-    "gtx 1060": "1c03",
-    "geforce gtx 1070": "1b81",
-    "gtx 1070": "1b81",
-    "geforce gtx 1080 ti": "1b06",
-    "gtx 1080 ti": "1b06",
-    "t4": "1eb8",
+AMD_VENDOR = "1002"
+UNKNOWN_VENDOR = "0000"
+
+ACCELERATOR_MODEL_IDS: dict[str, tuple[str, str]] = {
+    "tesla v100s": (NVIDIA_VENDOR, "1df6"),
+    "tesla v100": (NVIDIA_VENDOR, "1db4"),
+    "v100s": (NVIDIA_VENDOR, "1df6"),
+    "v100": (NVIDIA_VENDOR, "1db4"),
+    "l4": (NVIDIA_VENDOR, "27b8"),
+    "l40s": (NVIDIA_VENDOR, "26b9"),
+    "l40": (NVIDIA_VENDOR, "26b5"),
+    "h100": (NVIDIA_VENDOR, "2330"),
+    "h200": (NVIDIA_VENDOR, "2335"),
+    "a100": (NVIDIA_VENDOR, "20b0"),
+    "a10": (NVIDIA_VENDOR, "2236"),
+    "quadro-rtx5000": (NVIDIA_VENDOR, "1e30"),
+    "quadro rtx 5000": (NVIDIA_VENDOR, "1e30"),
+    "rtx5000": (NVIDIA_VENDOR, "1e30"),
+    "rtx 5000": (NVIDIA_VENDOR, "1e30"),
+    "geforce gtx 1060": (NVIDIA_VENDOR, "1c03"),
+    "gtx 1060": (NVIDIA_VENDOR, "1c03"),
+    "geforce gtx 1070": (NVIDIA_VENDOR, "1b81"),
+    "gtx 1070": (NVIDIA_VENDOR, "1b81"),
+    "geforce gtx 1080 ti": (NVIDIA_VENDOR, "1b06"),
+    "gtx 1080 ti": (NVIDIA_VENDOR, "1b06"),
+    "t4": (NVIDIA_VENDOR, "1eb8"),
+    "mi25": (AMD_VENDOR, "740c"),
+    "radeon": (AMD_VENDOR, "0000"),
 }
 
 DEFAULT_CATALOG_URL = (
@@ -49,14 +54,18 @@ def family_of(name: str) -> str:
     return name.split("-", 1)[0]
 
 
-def resolve_nvidia_model(gpu_name: str) -> str:
+def resolve_accelerator(gpu_name: str) -> tuple[str, str]:
     name = gpu_name.strip().lower()
-    if name in NVIDIA_GPU_MODEL_IDS:
-        return NVIDIA_GPU_MODEL_IDS[name]
-    for key, model in sorted(NVIDIA_GPU_MODEL_IDS.items(), key=lambda kv: -len(kv[0])):
+    for key, (vendor, model) in sorted(
+        ACCELERATOR_MODEL_IDS.items(), key=lambda kv: -len(kv[0])
+    ):
         if key in name:
-            return model
-    return "0000"
+            return vendor, model
+    if "amd" in name or "radeon" in name:
+        return AMD_VENDOR, "0000"
+    if name:
+        return NVIDIA_VENDOR, "0000"
+    return UNKNOWN_VENDOR, "0000"
 
 
 def cpu_flags(archs: list[str]) -> list[str]:
@@ -144,11 +153,11 @@ def template_from_flavor(flavor: dict[str, Any]) -> dict[str, Any]:
     }
 
     if gpu_count and gpu_model:
-        model = resolve_nvidia_model(str(gpu_model))
+        vendor, model = resolve_accelerator(str(gpu_model))
         if model == "0000":
-            tmpl["info"]["description"] += "; unmapped NVIDIA GPU model (review pci.model)"
+            tmpl["info"]["description"] += "; unmapped accelerator model (review pci.model)"
         tmpl["pci"] = [
-            {"vendor": NVIDIA_VENDOR, "model": model, "quantity": gpu_count}
+            {"vendor": vendor, "model": model, "quantity": gpu_count}
         ]
     return tmpl
 

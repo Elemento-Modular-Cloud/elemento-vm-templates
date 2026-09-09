@@ -28,4 +28,4 @@ python3 scripts/generate_ovh_templates.py
 python3 scripts/generate_ovh_templates.py --include-windows
 ```
 
-Mapping: technical `cpu.cores` → `cpu.slots`, `memory.size` (GiB) → `ram.ramsize` (MiB), NVIDIA `gpu` → `pci`. Windows `win-*` SKUs are skipped by default (same hardware as Linux flavors).
+Mapping: technical `cpu.cores` → `cpu.slots`, `memory.size` (GiB) → `ram.ramsize` (MiB), any accelerator `gpu` → `pci`. Windows `win-*` SKUs are skipped by default (same hardware as Linux flavors).
