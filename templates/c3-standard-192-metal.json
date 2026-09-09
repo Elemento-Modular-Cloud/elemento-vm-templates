@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3-standard-192-metal",
+        "description": "GCP Compute Engine c3-standard-192-metal (Compute optimized); 192 vCPU; 786432 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 786432,
+        "reqECC": false
+    }
+}

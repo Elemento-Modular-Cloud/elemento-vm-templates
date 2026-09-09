@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g2-standard-32",
+        "description": "GCP Compute Engine g2-standard-32 (Accelerator optimized); 32 vCPU; 131072 MiB RAM; 1x nvidia-l4"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "27b8",
+            "quantity": 1
+        }
+    ]
+}

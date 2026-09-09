@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4n-standard-48",
+        "description": "GCP Compute Engine c4n-standard-48 (Network optimized); 48 vCPU; 184320 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 184320,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3d-highmem-360",
+        "description": "GCP Compute Engine c3d-highmem-360 (Memory optimized); 360 vCPU; 2949120 MiB RAM"
+    },
+    "cpu": {
+        "slots": 360,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 2949120,
+        "reqECC": false
+    }
+}

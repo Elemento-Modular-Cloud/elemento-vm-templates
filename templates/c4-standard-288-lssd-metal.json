@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4-standard-288-lssd-metal",
+        "description": "GCP Compute Engine c4-standard-288-lssd-metal (Compute optimized); 288 vCPU; 1105920 MiB RAM"
+    },
+    "cpu": {
+        "slots": 288,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1105920,
+        "reqECC": false
+    }
+}

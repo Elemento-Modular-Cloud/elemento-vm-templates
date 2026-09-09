@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "z3-highmem-44-standardlssd",
+        "description": "GCP Compute Engine z3-highmem-44-standardlssd (Storage optimized); 44 vCPU; 360448 MiB RAM"
+    },
+    "cpu": {
+        "slots": 44,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 360448,
+        "reqECC": false
+    }
+}

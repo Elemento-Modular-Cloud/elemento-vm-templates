@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4-standard-24",
+        "description": "GCP Compute Engine c4-standard-24 (Compute optimized); 24 vCPU; 92160 MiB RAM"
+    },
+    "cpu": {
+        "slots": 24,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 92160,
+        "reqECC": false
+    }
+}

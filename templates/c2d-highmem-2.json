@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c2d-highmem-2",
+        "description": "GCP Compute Engine c2d-highmem-2 (Memory optimized); 2 vCPU; 16384 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}

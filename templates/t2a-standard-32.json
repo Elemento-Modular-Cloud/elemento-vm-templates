@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "t2a-standard-32",
+        "description": "GCP Compute Engine t2a-standard-32 (General purpose); 32 vCPU; 131072 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

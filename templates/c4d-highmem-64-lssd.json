@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4d-highmem-64-lssd",
+        "description": "GCP Compute Engine c4d-highmem-64-lssd (Memory optimized); 64 vCPU; 516096 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 516096,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c4a-standard-8-lssd",
+        "description": "GCP Compute Engine c4a-standard-8-lssd (Compute optimized); 8 vCPU; 32768 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

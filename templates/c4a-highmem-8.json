@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c4a-highmem-8",
+        "description": "GCP Compute Engine c4a-highmem-8 (Memory optimized); 8 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

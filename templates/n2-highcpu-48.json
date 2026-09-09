@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n2-highcpu-48",
+        "description": "GCP Compute Engine n2-highcpu-48 (Compute optimized); 48 vCPU; 49152 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 49152,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4-highmem-96-lssd",
+        "description": "GCP Compute Engine c4-highmem-96-lssd (Memory optimized); 96 vCPU; 761856 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 761856,
+        "reqECC": false
+    }
+}

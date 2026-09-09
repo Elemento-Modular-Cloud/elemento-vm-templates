@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3d-highmem-16-lssd",
+        "description": "GCP Compute Engine c3d-highmem-16-lssd (Memory optimized); 16 vCPU; 131072 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 131072,
+        "reqECC": false
+    }
+}

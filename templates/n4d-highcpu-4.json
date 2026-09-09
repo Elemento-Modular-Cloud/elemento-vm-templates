@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n4d-highcpu-4",
+        "description": "GCP Compute Engine n4d-highcpu-4 (Compute optimized); 4 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

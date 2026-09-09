@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c2d-standard-2",
+        "description": "GCP Compute Engine c2d-standard-2 (Compute optimized); 2 vCPU; 8192 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 8192,
+        "reqECC": false
+    }
+}

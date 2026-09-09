@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c4a-highmem-72",
+        "description": "GCP Compute Engine c4a-highmem-72 (Memory optimized); 72 vCPU; 589824 MiB RAM"
+    },
+    "cpu": {
+        "slots": 72,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 589824,
+        "reqECC": false
+    }
+}

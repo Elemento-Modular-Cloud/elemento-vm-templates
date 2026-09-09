@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a3-ultragpu-8g",
+        "description": "GCP Compute Engine a3-ultragpu-8g (Accelerator optimized); 224 vCPU; 3022848 MiB RAM; 8x nvidia-h200-141gb"
+    },
+    "cpu": {
+        "slots": 224,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3022848,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2335",
+            "quantity": 8
+        }
+    ]
+}

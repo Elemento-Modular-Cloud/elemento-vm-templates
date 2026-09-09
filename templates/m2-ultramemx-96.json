@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m2-ultramemx-96",
+        "description": "GCP Compute Engine m2-ultramemx-96 (Memory optimized); 96 vCPU; 614400 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 614400,
+        "reqECC": false
+    }
+}

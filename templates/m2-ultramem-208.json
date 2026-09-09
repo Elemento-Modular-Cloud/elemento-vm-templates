@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m2-ultramem-208",
+        "description": "GCP Compute Engine m2-ultramem-208 (Memory optimized); 208 vCPU; 6029312 MiB RAM"
+    },
+    "cpu": {
+        "slots": 208,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 6029312,
+        "reqECC": false
+    }
+}

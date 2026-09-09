@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n1-highmem-32",
+        "description": "GCP Compute Engine n1-highmem-32 (Memory optimized); 32 vCPU; 212992 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 212992,
+        "reqECC": false
+    }
+}

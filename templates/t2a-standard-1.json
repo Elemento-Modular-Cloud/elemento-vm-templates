@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "t2a-standard-1",
+        "description": "GCP Compute Engine t2a-standard-1 (General purpose); 1 vCPU; 4096 MiB RAM"
+    },
+    "cpu": {
+        "slots": 1,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 4096,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4-highmem-2",
+        "description": "GCP Compute Engine c4-highmem-2 (Memory optimized); 2 vCPU; 15360 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 15360,
+        "reqECC": false
+    }
+}

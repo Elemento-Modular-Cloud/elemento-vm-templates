@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m4-hypermem-16",
+        "description": "GCP Compute Engine m4-hypermem-16 (Memory optimized); 16 vCPU; 253952 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 253952,
+        "reqECC": false
+    }
+}

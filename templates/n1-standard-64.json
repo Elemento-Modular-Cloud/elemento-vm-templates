@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n1-standard-64",
+        "description": "GCP Compute Engine n1-standard-64 (General purpose); 64 vCPU; 245760 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 245760,
+        "reqECC": false
+    }
+}

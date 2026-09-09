@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "t2d-standard-48",
+        "description": "GCP Compute Engine t2d-standard-48 (General purpose); 48 vCPU; 196608 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}

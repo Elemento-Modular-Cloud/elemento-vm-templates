@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "z3-highmem-192-highlssd-metal",
+        "description": "GCP Compute Engine z3-highmem-192-highlssd-metal (Storage optimized); 192 vCPU; 1572864 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1572864,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n4-standard-80",
+        "description": "GCP Compute Engine n4-standard-80 (General purpose); 80 vCPU; 327680 MiB RAM"
+    },
+    "cpu": {
+        "slots": 80,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 327680,
+        "reqECC": false
+    }
+}

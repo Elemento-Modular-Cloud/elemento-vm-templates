@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a3-highgpu-1g",
+        "description": "GCP Compute Engine a3-highgpu-1g (Accelerator optimized); 26 vCPU; 239616 MiB RAM; 1x nvidia-h100-80gb"
+    },
+    "cpu": {
+        "slots": 26,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 239616,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 1
+        }
+    ]
+}

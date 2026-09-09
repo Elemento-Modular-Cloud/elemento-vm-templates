@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "g2-standard-4",
+        "description": "GCP Compute Engine g2-standard-4 (Accelerator optimized); 4 vCPU; 16384 MiB RAM; 1x nvidia-l4"
+    },
+    "cpu": {
+        "slots": 4,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "27b8",
+            "quantity": 1
+        }
+    ]
+}

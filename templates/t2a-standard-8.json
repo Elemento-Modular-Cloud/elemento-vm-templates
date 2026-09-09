@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "t2a-standard-8",
+        "description": "GCP Compute Engine t2a-standard-8 (General purpose); 8 vCPU; 32768 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 32768,
+        "reqECC": false
+    }
+}

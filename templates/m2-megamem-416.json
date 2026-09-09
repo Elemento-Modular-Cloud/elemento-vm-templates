@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m2-megamem-416",
+        "description": "GCP Compute Engine m2-megamem-416 (Memory optimized); 416 vCPU; 6029312 MiB RAM"
+    },
+    "cpu": {
+        "slots": 416,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 6029312,
+        "reqECC": false
+    }
+}

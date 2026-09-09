@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "z3-highmem-22-standardlssd",
+        "description": "GCP Compute Engine z3-highmem-22-standardlssd (Storage optimized); 22 vCPU; 180224 MiB RAM"
+    },
+    "cpu": {
+        "slots": 22,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 180224,
+        "reqECC": false
+    }
+}

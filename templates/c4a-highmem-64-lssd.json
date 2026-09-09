@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c4a-highmem-64-lssd",
+        "description": "GCP Compute Engine c4a-highmem-64-lssd (Memory optimized); 64 vCPU; 524288 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 524288,
+        "reqECC": false
+    }
+}

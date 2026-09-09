@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3d-highmem-30",
+        "description": "GCP Compute Engine c3d-highmem-30 (Memory optimized); 30 vCPU; 245760 MiB RAM"
+    },
+    "cpu": {
+        "slots": 30,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 245760,
+        "reqECC": false
+    }
+}

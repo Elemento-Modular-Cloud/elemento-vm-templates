@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4d-highcpu-48",
+        "description": "GCP Compute Engine c4d-highcpu-48 (Compute optimized); 48 vCPU; 92160 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 92160,
+        "reqECC": false
+    }
+}

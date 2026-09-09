@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n1-highmem-8",
+        "description": "GCP Compute Engine n1-highmem-8 (Memory optimized); 8 vCPU; 53248 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 53248,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4d-highcpu-64",
+        "description": "GCP Compute Engine c4d-highcpu-64 (Compute optimized); 64 vCPU; 122880 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 122880,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3-highmem-88",
+        "description": "GCP Compute Engine c3-highmem-88 (Memory optimized); 88 vCPU; 720896 MiB RAM"
+    },
+    "cpu": {
+        "slots": 88,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 720896,
+        "reqECC": false
+    }
+}

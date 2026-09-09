@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n1-highcpu-64",
+        "description": "GCP Compute Engine n1-highcpu-64 (Compute optimized); 64 vCPU; 58982 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 58982,
+        "reqECC": false
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m3-megamem-128",
+        "description": "GCP Compute Engine m3-megamem-128 (Memory optimized); 128 vCPU; 1998848 MiB RAM"
+    },
+    "cpu": {
+        "slots": 128,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1998848,
+        "reqECC": false
+    }
+}

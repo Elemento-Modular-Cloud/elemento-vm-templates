@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3-highcpu-22",
+        "description": "GCP Compute Engine c3-highcpu-22 (Compute optimized); 22 vCPU; 45056 MiB RAM"
+    },
+    "cpu": {
+        "slots": 22,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 45056,
+        "reqECC": false
+    }
+}

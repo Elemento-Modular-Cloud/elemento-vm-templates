@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a2-megagpu-16g",
+        "description": "GCP Compute Engine a2-megagpu-16g (Accelerator optimized); 96 vCPU; 1392640 MiB RAM; 16x nvidia-tesla-a100"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1392640,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "20b0",
+            "quantity": 16
+        }
+    ]
+}

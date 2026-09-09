@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "n4a-standard-64",
+        "description": "GCP Compute Engine n4a-standard-64 (General purpose); 64 vCPU; 262144 MiB RAM"
+    },
+    "cpu": {
+        "slots": 64,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 262144,
+        "reqECC": false
+    }
+}

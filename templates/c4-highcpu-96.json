@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4-highcpu-96",
+        "description": "GCP Compute Engine c4-highcpu-96 (Compute optimized); 96 vCPU; 196608 MiB RAM"
+    },
+    "cpu": {
+        "slots": 96,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 196608,
+        "reqECC": false
+    }
+}

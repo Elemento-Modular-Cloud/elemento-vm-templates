@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3d-standard-360-lssd",
+        "description": "GCP Compute Engine c3d-standard-360-lssd (Compute optimized); 360 vCPU; 1474560 MiB RAM"
+    },
+    "cpu": {
+        "slots": 360,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1474560,
+        "reqECC": false
+    }
+}

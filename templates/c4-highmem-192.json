@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4-highmem-192",
+        "description": "GCP Compute Engine c4-highmem-192 (Memory optimized); 192 vCPU; 1523712 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1523712,
+        "reqECC": false
+    }
+}

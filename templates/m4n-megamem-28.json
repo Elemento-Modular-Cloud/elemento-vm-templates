@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m4n-megamem-28",
+        "description": "GCP Compute Engine m4n-megamem-28 (Memory optimized); 28 vCPU; 380928 MiB RAM"
+    },
+    "cpu": {
+        "slots": 28,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 380928,
+        "reqECC": false
+    }
+}

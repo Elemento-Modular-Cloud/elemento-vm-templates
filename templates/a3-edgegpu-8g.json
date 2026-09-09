@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a3-edgegpu-8g",
+        "description": "GCP Compute Engine a3-edgegpu-8g (Accelerator optimized); 208 vCPU; 1916928 MiB RAM; 8x nvidia-h100-80gb"
+    },
+    "cpu": {
+        "slots": 208,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 1916928,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "2330",
+            "quantity": 8
+        }
+    ]
+}

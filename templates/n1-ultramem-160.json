@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "n1-ultramem-160",
+        "description": "GCP Compute Engine n1-ultramem-160 (Memory optimized); 160 vCPU; 3936256 MiB RAM"
+    },
+    "cpu": {
+        "slots": 160,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3936256,
+        "reqECC": false
+    }
+}

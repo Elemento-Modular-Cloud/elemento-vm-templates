@@ -1,0 +1,29 @@
+{
+    "info": {
+        "name": "a2-ultragpu-4g",
+        "description": "GCP Compute Engine a2-ultragpu-4g (Accelerator optimized); 48 vCPU; 696320 MiB RAM; 4x nvidia-a100-80gb"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 696320,
+        "reqECC": false
+    },
+    "pci": [
+        {
+            "vendor": "10de",
+            "model": "20b5",
+            "quantity": 4
+        }
+    ]
+}

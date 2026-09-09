@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "c4a-standard-16-lssd",
+        "description": "GCP Compute Engine c4a-standard-16-lssd (Compute optimized); 16 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 16,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

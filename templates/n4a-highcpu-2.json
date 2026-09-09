@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "n4a-highcpu-2",
+        "description": "GCP Compute Engine n4a-highcpu-2 (Compute optimized); 2 vCPU; 4096 MiB RAM"
+    },
+    "cpu": {
+        "slots": 2,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 4096,
+        "reqECC": false
+    }
+}

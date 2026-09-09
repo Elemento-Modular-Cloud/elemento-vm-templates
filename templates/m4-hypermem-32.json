@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m4-hypermem-32",
+        "description": "GCP Compute Engine m4-hypermem-32 (Memory optimized); 32 vCPU; 507904 MiB RAM"
+    },
+    "cpu": {
+        "slots": 32,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 507904,
+        "reqECC": false
+    }
+}

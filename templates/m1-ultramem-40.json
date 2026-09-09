@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m1-ultramem-40",
+        "description": "GCP Compute Engine m1-ultramem-40 (Memory optimized); 40 vCPU; 984064 MiB RAM"
+    },
+    "cpu": {
+        "slots": 40,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 984064,
+        "reqECC": false
+    }
+}

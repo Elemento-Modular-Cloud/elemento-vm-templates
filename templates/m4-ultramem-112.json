@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "m4-ultramem-112",
+        "description": "GCP Compute Engine m4-ultramem-112 (Memory optimized); 112 vCPU; 3047424 MiB RAM"
+    },
+    "cpu": {
+        "slots": 112,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 3047424,
+        "reqECC": false
+    }
+}

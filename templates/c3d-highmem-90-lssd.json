@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c3d-highmem-90-lssd",
+        "description": "GCP Compute Engine c3d-highmem-90-lssd (Memory optimized); 90 vCPU; 737280 MiB RAM"
+    },
+    "cpu": {
+        "slots": 90,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 737280,
+        "reqECC": false
+    }
+}

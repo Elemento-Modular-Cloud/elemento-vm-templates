@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "n4a-highmem-48",
+        "description": "GCP Compute Engine n4a-highmem-48 (Memory optimized); 48 vCPU; 393216 MiB RAM"
+    },
+    "cpu": {
+        "slots": 48,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "AARCH64"
+        ],
+        "flags": []
+    },
+    "ram": {
+        "ramsize": 393216,
+        "reqECC": false
+    }
+}

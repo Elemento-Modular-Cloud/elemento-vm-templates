@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c4d-standard-192",
+        "description": "GCP Compute Engine c4d-standard-192 (Compute optimized); 192 vCPU; 761856 MiB RAM"
+    },
+    "cpu": {
+        "slots": 192,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 761856,
+        "reqECC": false
+    }
+}

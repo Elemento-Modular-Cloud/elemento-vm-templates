@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "e2-highmem-8",
+        "description": "GCP Compute Engine e2-highmem-8 (Memory optimized); 8 vCPU; 65536 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 65536,
+        "reqECC": false
+    }
+}

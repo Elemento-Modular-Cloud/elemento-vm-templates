@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "c2d-highcpu-8",
+        "description": "GCP Compute Engine c2d-highcpu-8 (Compute optimized); 8 vCPU; 16384 MiB RAM"
+    },
+    "cpu": {
+        "slots": 8,
+        "overprovision": 2,
+        "allowSMT": false,
+        "archs": [
+            "X86_64"
+        ],
+        "flags": [
+            "sse2",
+            "avx2"
+        ]
+    },
+    "ram": {
+        "ramsize": 16384,
+        "reqECC": false
+    }
+}
