@@ -18,5 +18,6 @@
     "ram": {
         "ramsize": 16384,
         "reqECC": false
-    }
+    },
+    "public_meson_disk_gib": 100
 }
