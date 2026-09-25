@@ -168,6 +168,7 @@ def index_entry(tmpl: dict[str, Any], rel_file: str) -> dict[str, Any]:
         "allow_smt": 1 if tmpl["cpu"].get("allowSMT") else 0,
         "req_ecc": 1 if tmpl["ram"].get("reqECC") else 0,
         "gpu_quantity": sum(int(p.get("quantity") or 0) for p in pci),
+        "public_meson_disk_gib": tmpl.get("public_meson_disk_gib"),
         "pci": pci,
     }
 
@@ -197,7 +198,8 @@ def write_sqlite(entries: list[dict[str, Any]], db_path: Path) -> None:
                 overprovision INTEGER NOT NULL,
                 allow_smt INTEGER NOT NULL,
                 req_ecc INTEGER NOT NULL,
-                gpu_quantity INTEGER NOT NULL
+                gpu_quantity INTEGER NOT NULL,
+                public_meson_disk_gib INTEGER
             );
             CREATE TABLE pci (
                 id INTEGER PRIMARY KEY,
@@ -221,8 +223,8 @@ def write_sqlite(entries: list[dict[str, Any]], db_path: Path) -> None:
             """
             INSERT INTO templates(
                 name, family, file, description, slots, ramsize, archs, flags,
-                overprovision, allow_smt, req_ecc, gpu_quantity
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                overprovision, allow_smt, req_ecc, gpu_quantity, public_meson_disk_gib
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             [
                 (
@@ -238,6 +240,7 @@ def write_sqlite(entries: list[dict[str, Any]], db_path: Path) -> None:
                     e["allow_smt"],
                     e["req_ecc"],
                     e["gpu_quantity"],
+                    e["public_meson_disk_gib"],
                 )
                 for e in entries
             ],
